@@ -1,0 +1,510 @@
+;; Brandon Druschel
+;; 12/13/18
+;; TSP GA: Crossover (2) Demo
+
+
+[21]> (perform-crossovers-demo)
+
+
+
+Generation 1 population...
+
+
+
+
+the sample of individuals ...
+11    (G F A K H B E D I C J) 2056
+58    (I A B F C H J D G E K) 3858
+16    (I K J A D B G C H F E) 2561
+46    (J A H K I B G F D E C) 3321
+74    (K I B A E F G H D J C) 416
+54    (H B I A G J D K E C F) 1946
+12    (J B K F G A D H C E I) 1470
+2     (I A C K J E F B H G D) 1602
+
+the most fit of the sample ...
+74    (K I B A E F G H D J C) 416
+
+the sample of individuals ...
+47    (C K D F A H G J I E B) 1738
+58    (I A B F C H J D G E K) 3858
+61    (H F D A B E J C I K G) 1071
+12    (J B K F G A D H C E I) 1470
+85    (A G H F I B D J C K E) 3610
+9     (H F A D I G C J B K E) 4560
+81    (C I D B F A G E J K H) 1091
+49    (K A C I J E B D G H F) 1938
+
+the most fit of the sample ...
+61    (H F D A B E J C I K G) 1071
+
+Selected mother =
+74    (K I B A E F G H D J C) 416
+Selected father =
+61    (H F D A B E J C I K G) 1071
+the crossover =
+0     (K I A B E F G H D J C) 1071
+the possibly mutated individual =
+0     (K I A B E F G H D J C) 1071
+the renumbered individual =
+1     (K I A B E F G H D J C) 1071
+
+
+
+Generation 1 population...
+
+1     (K I A B E F G H D J C) 1071
+
+
+
+the sample of individuals ...
+51    (K A C B D E G F J H I) 948
+56    (K I D A G B J F H C E) 4145
+83    (G A H D J F I K C B E) 1996
+12    (J B K F G A D H C E I) 1470
+28    (D I K B J F H C G A E) 416
+68    (F D A C J G I H E K B) 2574
+57    (F H B A K E G C J D I) 902
+2     (I A C K J E F B H G D) 1602
+
+the most fit of the sample ...
+28    (D I K B J F H C G A E) 416
+
+the sample of individuals ...
+45    (A B J D H F I K C E G) 3910
+15    (J G H I K D F B C A E) 416
+58    (I A B F C H J D G E K) 3858
+19    (B F A J H C D G I K E) 3697
+16    (I K J A D B G C H F E) 2561
+47    (C K D F A H G J I E B) 1738
+13    (B I A F D C G H E K J) 2026
+45    (A B J D H F I K C E G) 3910
+
+the most fit of the sample ...
+15    (J G H I K D F B C A E) 416
+
+Selected mother =
+28    (D I K B J F H C G A E) 416
+Selected father =
+15    (J G H I K D F B C A E) 416
+the crossover =
+0     (I K D B J F H C G A E) 416
+the possibly mutated individual =
+0     (I D K B J F H C G A E) 416
+the renumbered individual =
+2     (I D K B J F H C G A E) 416
+
+
+
+Generation 1 population...
+
+1     (K I A B E F G H D J C) 1071
+2     (I D K B J F H C G A E) 416
+
+
+
+the sample of individuals ...
+97    (K F A G E H C J I D B) 1091
+53    (H C J K B A G E F D I) 1091
+39    (C J G H K F I A E B D) 416
+99    (H B J I K A C D G E F) 1993
+72    (C I H D B G J A F K E) 1095
+85    (A G H F I B D J C K E) 3610
+53    (H C J K B A G E F D I) 1091
+53    (H C J K B A G E F D I) 1091
+
+the most fit of the sample ...
+39    (C J G H K F I A E B D) 416
+
+the sample of individuals ...
+67    (B J I F D H A K G C E) 2244
+41    (C J A E B F H G I K D) 416
+66    (I A F D K H G J B C E) 4920
+48    (J F A C B I E D H K G) 1331
+14    (H G K I J A F E B C D) 339
+91    (A B J K G F E C H D I) 3588
+19    (B F A J H C D G I K E) 3697
+55    (H I J A D B K E F G C) 2312
+
+the most fit of the sample ...
+14    (H G K I J A F E B C D) 339
+
+Selected mother =
+39    (C J G H K F I A E B D) 416
+Selected father =
+14    (H G K I J A F E B C D) 339
+the crossover =
+0     (C J H G K F I A E B D) 416
+the possibly mutated individual =
+0     (C J H G K F I A E B D) 416
+the renumbered individual =
+3     (C J H G K F I A E B D) 416
+
+
+
+Generation 1 population...
+
+1     (K I A B E F G H D J C) 1071
+2     (I D K B J F H C G A E) 416
+3     (C J H G K F I A E B D) 416
+
+
+
+the sample of individuals ...
+24    (K J I A E H C G B D F) 416
+89    (I A B E J H F D K C G) 1071
+8     (J A F C H G I D K E B) 4993
+41    (C J A E B F H G I K D) 416
+56    (K I D A G B J F H C E) 4145
+34    (A E C H J I D G B F K) 416
+94    (J C G K I A D B H E F) 2086
+23    (G H C K J B F D I A E) 416
+
+the most fit of the sample ...
+24    (K J I A E H C G B D F) 416
+
+the sample of individuals ...
+2     (I A C K J E F B H G D) 1602
+54    (H B I A G J D K E C F) 1946
+57    (F H B A K E G C J D I) 902
+34    (A E C H J I D G B F K) 416
+43    (F D I A E B G J H K C) 416
+16    (I K J A D B G C H F E) 2561
+62    (D G B F H J A C E I K) 1141
+8     (J A F C H G I D K E B) 4993
+
+the most fit of the sample ...
+34    (A E C H J I D G B F K) 416
+
+Selected mother =
+24    (K J I A E H C G B D F) 416
+Selected father =
+34    (A E C H J I D G B F K) 416
+the crossover =
+0     (K J I A E C H G B D F) 416
+the possibly mutated individual =
+0     (K J I A D C H G B E F) 2201
+the renumbered individual =
+4     (K J I A D C H G B E F) 2201
+
+
+
+Generation 1 population...
+
+1     (K I A B E F G H D J C) 1071
+2     (I D K B J F H C G A E) 416
+3     (C J H G K F I A E B D) 416
+4     (K J I A D C H G B E F) 2201
+
+
+
+the sample of individuals ...
+34    (A E C H J I D G B F K) 416
+12    (J B K F G A D H C E I) 1470
+4     (B J C K D A I E G F H) 1296
+83    (G A H D J F I K C B E) 1996
+50    (J K G D H A F B C E I) 1136
+81    (C I D B F A G E J K H) 1091
+17    (H K F A E J G I D B C) 416
+72    (C I H D B G J A F K E) 1095
+
+the most fit of the sample ...
+34    (A E C H J I D G B F K) 416
+
+the sample of individuals ...
+96    (K H J A C B F I G E D) 2030
+29    (J I F C B A H D E G K) 254
+74    (K I B A E F G H D J C) 416
+42    (D C F B A H I J E K G) 1680
+19    (B F A J H C D G I K E) 3697
+41    (C J A E B F H G I K D) 416
+33    (G A F D E I J H B C K) 365
+46    (J A H K I B G F D E C) 3321
+
+the most fit of the sample ...
+29    (J I F C B A H D E G K) 254
+
+Selected mother =
+34    (A E C H J I D G B F K) 416
+Selected father =
+29    (J I F C B A H D E G K) 254
+the crossover =
+0     (A E C H J I D G B F K) 416
+the possibly mutated individual =
+0     (A E C H D I J G B F K) 416
+the renumbered individual =
+5     (A E C H D I J G B F K) 416
+
+
+
+Generation 1 population...
+
+1     (K I A B E F G H D J C) 1071
+2     (I D K B J F H C G A E) 416
+3     (C J H G K F I A E B D) 416
+4     (K J I A D C H G B E F) 2201
+5     (A E C H D I J G B F K) 416
+
+
+
+the sample of individuals ...
+52    (C F D H A G I B K E J) 3227
+34    (A E C H D I J G B F K) 416
+71    (A E H B I F K J G D C) 416
+8     (J A F C H G I D K E B) 4993
+73    (H A F K B E J I C D G) 1746
+69    (H K A C E I F B D J G) 1141
+62    (D G B F H J A C E I K) 1141
+8     (J A F C H G I D K E B) 4993
+
+the most fit of the sample ...
+34    (A E C H D I J G B F K) 416
+
+the sample of individuals ...
+64    (H A F D C I G K B J E) 5099
+25    (C H A I B K J D E G F) 3223
+4     (B J C K D A I E G F H) 1296
+80    (A K F D H G B I E C J) 4135
+21    (A G C E I K B J D H F) 1593
+60    (A K F I B J C G H E D) 4444
+6     (D A F I G E J C H B K) 1959
+80    (A K F D H G B I E C J) 4135
+
+the most fit of the sample ...
+4     (B J C K D A I E G F H) 1296
+
+Selected mother =
+34    (A E C H D I J G B F K) 416
+Selected father =
+4     (B J C K D A I E G F H) 1296
+the crossover =
+0     (A E C H D I J G B F K) 416
+the possibly mutated individual =
+0     (A E C H D I F G B J K) 416
+the renumbered individual =
+6     (A E C H D I F G B J K) 416
+
+
+
+Generation 1 population...
+
+1     (K I A B E F G H D J C) 1071
+2     (I D K B J F H C G A E) 416
+3     (C J H G K F I A E B D) 416
+4     (K J I A D C H G B E F) 2201
+5     (A E C H D I F G B J K) 416
+6     (A E C H D I F G B J K) 416
+
+
+
+the sample of individuals ...
+99    (H B J I K A C D G E F) 1993
+77    (H C A D K I E B F G J) 1837
+11    (G F A K H B E D I C J) 2056
+79    (G A K J D E H C F B I) 1071
+59    (D I B G A K E J F H C) 902
+36    (C I K D F A G E B H J) 1091
+81    (C I D B F A G E J K H) 1091
+90    (F A E K I C H G B J D) 416
+
+the most fit of the sample ...
+90    (F A E K I C H G B J D) 416
+
+the sample of individuals ...
+43    (F D I A E B G J H K C) 416
+88    (G K H A J E B F I D C) 1498
+44    (G F A I J E C H K B D) 1717
+70    (H D J F I K G A E B C) 416
+80    (A K F D H G B I E C J) 4135
+98    (A B D I H J K E C G F) 4425
+100   (J I K F C G H A E B D) 416
+56    (K I D A G B J F H C E) 4145
+
+the most fit of the sample ...
+43    (F D I A E B G J H K C) 416
+
+Selected mother =
+90    (F A E K I C H G B J D) 416
+Selected father =
+43    (F D I A E B G J H K C) 416
+the crossover =
+0     (F A E K I C B G J H D) 416
+the possibly mutated individual =
+0     (F A E K I C B G J H D) 416
+the renumbered individual =
+7     (F A E K I C B G J H D) 416
+
+
+
+Generation 1 population...
+
+1     (K I A B E F G H D J C) 1071
+2     (I D K B J F H C G A E) 416
+3     (C J H G K F I A E B D) 416
+4     (K J I A D C H G B E F) 2201
+5     (A E C H D I F G B J K) 416
+6     (A E C H D I F G B J K) 416
+7     (F A E K I C B G J H D) 416
+
+
+
+the sample of individuals ...
+75    (J I H A F C G D E B K) 2326
+97    (K F A G E H C J I D B) 1091
+49    (K A C I J E B D G H F) 1938
+77    (H C A D K I E B F G J) 1837
+9     (H F A D I G C J B K E) 4560
+39    (C J G H K F I A E B D) 416
+46    (J A H K I B G F D E C) 3321
+50    (J K G D H A F B C E I) 1136
+
+the most fit of the sample ...
+39    (C J G H K F I A E B D) 416
+
+the sample of individuals ...
+77    (H C A D K I E B F G J) 1837
+70    (H D J F I K G A E B C) 416
+37    (G C H K F J I B D A E) 416
+33    (G A F D E I J H B C K) 365
+23    (G H C K J B F D I A E) 416
+5     (H D A I G F J K C E B) 4869
+54    (H B I A G J D K E C F) 1946
+17    (H K F A E J G I D B C) 416
+
+the most fit of the sample ...
+33    (G A F D E I J H B C K) 365
+
+Selected mother =
+39    (C J G H K F I A E B D) 416
+Selected father =
+33    (G A F D E I J H B C K) 365
+the crossover =
+0     (C J G H K F I A E B D) 416
+the possibly mutated individual =
+0     (C J G H K F I A E B D) 416
+the renumbered individual =
+8     (C J G H K F I A E B D) 416
+
+
+
+Generation 1 population...
+
+1     (K I A B E F G H D J C) 1071
+2     (I D K B J F H C G A E) 416
+3     (C J H G K F I A E B D) 416
+4     (K J I A D C H G B E F) 2201
+5     (A E C H D I F G B J K) 416
+6     (A E C H D I F G B J K) 416
+7     (F A E K I C B G J H D) 416
+8     (C J G H K F I A E B D) 416
+
+
+
+the sample of individuals ...
+25    (C H A I B K J D E G F) 3223
+64    (H A F D C I G K B J E) 5099
+18    (I J H D G A F C B E K) 1136
+69    (H K A C E I F B D J G) 1141
+24    (K J I A E H C G B D F) 416
+51    (K A C B D E G F J H I) 948
+9     (H F A D I G C J B K E) 4560
+41    (C J A E B F H G I K D) 416
+
+the most fit of the sample ...
+24    (K J I A E H C G B D F) 416
+
+the sample of individuals ...
+51    (K A C B D E G F J H I) 948
+37    (G C H K F J I B D A E) 416
+64    (H A F D C I G K B J E) 5099
+41    (C J A E B F H G I K D) 416
+51    (K A C B D E G F J H I) 948
+20    (D I A G J K B H C F E) 4096
+44    (G F A I J E C H K B D) 1717
+59    (D I B G A K E J F H C) 902
+
+the most fit of the sample ...
+37    (G C H K F J I B D A E) 416
+
+Selected mother =
+24    (K J I A E H C G B D F) 416
+Selected father =
+37    (G C H K F J I B D A E) 416
+the crossover =
+0     (K J I A E G C H B D F) 416
+the possibly mutated individual =
+0     (K J I A E G C H B D F) 416
+the renumbered individual =
+9     (K J I A E G C H B D F) 416
+
+
+
+Generation 1 population...
+
+1     (K I A B E F G H D J C) 1071
+2     (I D K B J F H C G A E) 416
+3     (C J H G K F I A E B D) 416
+4     (K J I A D C H G B E F) 2201
+5     (A E C H D I F G B J K) 416
+6     (A E C H D I F G B J K) 416
+7     (F A E K I C B G J H D) 416
+8     (C J G H K F I A E B D) 416
+9     (K J I A E G C H B D F) 416
+
+
+
+the sample of individuals ...
+2     (I A C K J E F B H G D) 1602
+26    (J I G A C E K B H F D) 1141
+8     (J A F C H G I D K E B) 4993
+15    (J G H I K D F B C A E) 416
+84    (K F B A H I E J C D G) 1259
+38    (A C G D H B K J E I F) 4610
+90    (F A E K I C H G B J D) 416
+19    (B F A J H C D G I K E) 3697
+
+the most fit of the sample ...
+15    (J G H I K D F B C A E) 416
+
+the sample of individuals ...
+77    (H C A D K I E B F G J) 1837
+2     (I A C K J E F B H G D) 1602
+11    (G F A K H B E D I C J) 2056
+29    (J I F C B A H D E G K) 254
+81    (C I D B F A G E J K H) 1091
+29    (J I F C B A H D E G K) 254
+27    (B A E K I J H G D C F) 416
+32    (K J A G H E I D F C B) 1495
+
+the most fit of the sample ...
+29    (J I F C B A H D E G K) 254
+
+Selected mother =
+15    (J G H I K D F B C A E) 416
+Selected father =
+29    (J I F C B A H D E G K) 254
+the crossover =
+0     (J G H I K D F C B A E) 416
+the possibly mutated individual =
+0     (J G H I K D F C B A E) 416
+the renumbered individual =
+10    (J G H I K D F C B A E) 416
+
+
+
+Generation 1 population...
+
+1     (K I A B E F G H D J C) 1071
+2     (I D K B J F H C G A E) 416
+3     (C J H G K F I A E B D) 416
+4     (K J I A D C H G B E F) 2201
+5     (A E C H D I F G B J K) 416
+6     (A E C H D I F G B J K) 416
+7     (F A E K I C B G J H D) 416
+8     (C J G H K F I A E B D) 416
+9     (K J I A E G C H B D F) 416
+10    (J G H I K D F C B A E) 416
+
+
+
+NIL

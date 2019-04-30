@@ -1,0 +1,26 @@
+;;;; TASK 7: GOAT TETHERING PROBLEM (DEMO)
+
+[1]> (cd "C:\\Users\\Brandon\\Desktop")
+#P"C:\\Users\\Brandon\\Desktop\\"
+[6]> (load "tethered_goat_solution.l")
+;; Loading file tethered_goat_solution.l ...
+;; Loaded file tethered_goat_solution.l
+T
+[7]> barn-length
+100
+[8]> barn-width
+70
+[9]> rope-length
+107
+[10]> rope-length-around-width
+37
+[11]> rope-length-around-length
+7
+[12]> area-1
+26976.07
+[13]> area-2
+1075.2101
+[14]> area-3
+38.484512
+[15]> total-area
+28089.766

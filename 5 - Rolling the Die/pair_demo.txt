@@ -1,0 +1,33 @@
+;;;; PROGRAMMING CHALLENGE: ROLLING THE DICE
+;; Brandon Druschel - 10/26/18
+
+;; TASK 3 - ROLL-FOR-PAIR (DEMO)
+
+[3]> (load "b.l")
+;; Loading file b.l ...
+;;  Loading file die.l ...
+;;  Loaded file die.l
+;;  Loading file accum.l ...
+;;  Loaded file accum.l
+;; Loaded file b.l
+T
+[4]> ( roll-for-pair d4 d6 )
+NIL
+[5]> ( to-string d4 )
+"[4, 1, (4 1 4 2 4 2 1 1)]"
+[6]> ( to-string d6 )
+"[6, 1, (1 6 2 3 6 4 2 1)]"
+[7]> ( roll-for-pair d6 d12 )
+NIL
+[8]> ( forget d6 )
+NIL
+[9]> ( forget d12 )
+NIL
+[10]> ( roll-for-pair d6 d12 )
+NIL
+[11]> ( to-string d6 )
+"[6, 5, (4 4 6 1 5)]"
+[12]> ( to-string d12 )
+"[12, 5, (8 1 4 3 5)]"
+[13]> (bye)
+Bye.

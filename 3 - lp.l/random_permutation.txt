@@ -1,0 +1,61 @@
+;;;; TASK VIII: RANDOM-PERMUTATION (DEMO)
+  
+  i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.49 (2010-07-07) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2010
+
+Type :h and hit Enter for context help.
+
+[1]> (load "lp.l")
+;; Loading file lp.l ...
+;; Loaded file lp.l
+T
+[2]> (random-permutation '(1 2 3 4 5 6 7 8 9 10) )
+(8 9 2 6 3 4 10 1 5 7)
+[3]> (random-permutation '(a b c d e f g h i) )
+(H G E D A C F I B)
+[4]> (random-permutation '( apple pear orange grape banana ) )
+(ORANGE APPLE GRAPE BANANA PEAR)
+[5]> (random-permutation '( a 1 b 2 c 3 d ) )
+(D A 3 C B 2 1)
+[6]> (random-permutation '(11 1 111 11111 ) )
+(111 11 11111 1)
+[7]> ( trace random-permutation)
+;; Tracing function RANDOM-PERMUTATION.
+(RANDOM-PERMUTATION)
+[8]> (random-permutation '(1 a apple 2 b banana 3 c grape) )
+1. Trace: (RANDOM-PERMUTATION '(1 A APPLE 2 B BANANA 3 C GRAPE))
+2. Trace: (RANDOM-PERMUTATION '(A APPLE 2 B BANANA 3 C GRAPE))
+3. Trace: (RANDOM-PERMUTATION '(A APPLE B BANANA 3 C GRAPE))
+4. Trace: (RANDOM-PERMUTATION '(A APPLE B BANANA 3 GRAPE))
+5. Trace: (RANDOM-PERMUTATION '(A APPLE B BANANA GRAPE))
+6. Trace: (RANDOM-PERMUTATION '(APPLE B BANANA GRAPE))
+7. Trace: (RANDOM-PERMUTATION '(APPLE B GRAPE))
+8. Trace: (RANDOM-PERMUTATION '(APPLE GRAPE))
+9. Trace: (RANDOM-PERMUTATION '(APPLE))
+10. Trace: (RANDOM-PERMUTATION 'NIL)
+10. Trace: RANDOM-PERMUTATION ==> NIL
+9. Trace: RANDOM-PERMUTATION ==> (APPLE)
+8. Trace: RANDOM-PERMUTATION ==> (GRAPE APPLE)
+7. Trace: RANDOM-PERMUTATION ==> (B GRAPE APPLE)
+6. Trace: RANDOM-PERMUTATION ==> (BANANA B GRAPE APPLE)
+5. Trace: RANDOM-PERMUTATION ==> (A BANANA B GRAPE APPLE)
+4. Trace: RANDOM-PERMUTATION ==> (3 A BANANA B GRAPE APPLE)
+3. Trace: RANDOM-PERMUTATION ==> (C 3 A BANANA B GRAPE APPLE)
+2. Trace: RANDOM-PERMUTATION ==> (2 C 3 A BANANA B GRAPE APPLE)
+1. Trace: RANDOM-PERMUTATION ==> (1 2 C 3 A BANANA B GRAPE APPLE)
+(1 2 C 3 A BANANA B GRAPE APPLE)
+[9]> (bye)
+Bye.

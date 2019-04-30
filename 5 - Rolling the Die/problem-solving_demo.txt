@@ -1,0 +1,150 @@
+;;;; PROGRAMMING CHALLENGE: ROLLING THE DICE
+;; Brandon Druschel - 10/26/18
+
+;; TASK 5 - EMPIRICAL PROBLEM SOLVING (DEMO)
+
+[1]> (load "b.l")
+;; Loading file b.l ...
+;;  Loading file die.l ...
+;;  Loaded file die.l
+;;  Loading file accum.l ...
+;;  Loaded file accum.l
+;; Loaded file b.l
+T
+
+;; How many rolls of two standard dice for a pair? 
+
+[2]> ( roll-count-standard-pair )
+1
+[3]> ( roll-count-standard-pair )
+8
+[4]> (to-string d6-1)
+"[6, 3, (2 3 6 4 2 1 4 3)]"
+[5]> (to-string d6-2)
+"[6, 3, (4 6 4 3 5 2 5 3)]"
+
+;; How many rolls of 3 sided and 12 sided die for a pair? 
+
+[6]> ( roll-count-d3-d12-pair )
+25
+[7]> ( roll-count-d3-d12-pair )
+7
+[8]> (to-string d3)
+"[3, 3, (1 2 3 2 3 3 3)]"
+[9]> (to-string d12)
+"[12, 3, (6 4 2 9 7 6 3)]"
+
+;; How many rolls of two standard dice for total of 7?
+
+[10]> ( roll-count-standard-sum 7 )
+3
+[11]> ( roll-count-standard-sum 7 )
+2
+[12]> ( roll-count-standard-sum 7 )
+1
+[13]> ( roll-count-standard-sum 7 )
+8
+[14]> (to-string d6-1)
+"[6, 3, (6 6 1 2 4 6 4 3)]"
+[15]> (to-string d6-2)
+"[6, 4, (5 6 5 4 6 5 5 4)]"
+
+;; How many rolls of 3 sided and 12 sided die for total of 7? 
+
+[16]> ( roll-count-d3-d12-sum-7 )
+
+*** - EVAL: undefined function ROLL-COUNT-D3-D12-SUM-7
+The following restarts are available:
+USE-VALUE      :R1      Input a value to be used instead of (FDEFINITION 'ROLL-COUNT-D3-D12-SUM-7).
+RETRY          :R2      Retry
+STORE-VALUE    :R3      Input a new value for (FDEFINITION 'ROLL-COUNT-D3-D12-SUM-7).
+ABORT          :R4      Abort main loop
+Break 1 [17]> :a
+[18]> ( roll-count-d3-d12-sum 7 )
+5
+[19]> ( roll-count-d3-d12-sum 7 )
+16
+[20]> (to-string d3)
+"[3, 1, (3 1 2 3 3 2 2 1 2 2 1 3 2 3 1 1)]"
+[21]> (to-string d12)
+"[12, 6, (2 8 7 11 2 10 8 1 8 12 4 5 8 10 3 6)]"
+
+;; How many rolls of two standard dice for total of 11?
+
+[22]> ( roll-count-standard-sum 11 )
+8
+[23]> ( roll-count-standard-sum 11 )
+29
+[24]> ( roll-count-standard-sum 11 )
+8
+[25]> ( roll-count-standard-sum 11 )
+10
+[26]> (to-string d6-1)
+"[6, 5, (2 1 3 2 2 3 4 1 5 5)]"
+[27]> (to-string d6-2)
+"[6, 6, (4 6 4 6 1 5 1 1 3 6)]"
+
+;; How many rolls of 3 sided and 12 sided die for total of 11?
+
+[28]> ( roll-count-d3-d12-sum 11 )
+1
+[29]> ( roll-count-d3-d12-sum 11 )
+14
+[30]> ( roll-count-d3-d12-sum 11 )
+24
+[31]> ( roll-count-d3-d12-sum 11 )
+15
+[32]> (to-string d3)
+"[3, 3, (2 1 1 2 3 1 1 3 1 1 3 1 1 2 3)]"
+[33]> (to-string d12)
+"[12, 8, (5 12 6 3 2 12 1 12 11 7 10 2 1 4 8)]"
+
+;; How many rolls of two standard dice for "7, 11, or doubles"?
+
+[43]> ( setf d6-1 (make-instance 'die) )
+#<DIE #x1A979229>
+[44]> ( setf d6-2 (make-instance 'die) )
+#<DIE #x1A979D41>
+[45]> (roll-count-7-11-pair d6-1 d6-2)
+2
+[46]> (forget d6-1)
+NIL
+[47]> (forget d6-2)
+NIL
+[48]> (roll-count-7-11-pair d6-1 d6-2)
+2
+[49]> (forget d6-1)
+NIL
+[50]> (forget d6-2)
+NIL
+[51]> (roll-count-7-11-pair d6-1 d6-2)
+6
+[52]> (to-string d6-1)
+"[6, 4, (6 5 3 4 3 4)]"
+[53]> (to-string d6-2)
+"[6, 3, (2 3 5 2 1 3)]"
+
+;; How many rolls of 3 sided and 12 sided die for "7, 11, or doubles"?
+
+[54]> ( setf d3 (make-instance 'die :faces 3) )
+#<DIE #x1A9964DD>
+[55]> ( setf d12 (make-instance 'die :faces 12) )
+#<DIE #x1A997021>
+[56]> (roll-count-7-11-pair d3 d12)
+4
+[57]> (to-string d3)
+"[3, 2, (1 1 1 2)]"
+[58]> (to-string d12)
+"[12, 2, (11 2 11 2)]"
+[59]> (forget d3)
+NIL
+[60]> (forget d12)
+NIL
+[61]> (roll-count-7-11-pair d3 d12)
+2
+[62]> (to-string d3)
+"[3, 2, (1 2)]"
+[63]> (to-string d12)
+"[12, 5, (5 5)]"
+[64]> (bye)
+Bye.

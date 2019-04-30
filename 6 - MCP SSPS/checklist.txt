@@ -1,0 +1,211 @@
+;; UNDEFINED METHODS
+( write-to-string )              [X]
+( establish-operators )**        [X]
+( display-explored-nodes )**     [X]
+( display-unexplored-nodes )**   [X]
+( goalp )**                      [X]
+   -> ( feast-state-p )          [X]
+   -> ( left-state-ok-p )        [X]
+   -> ( right-state-ok-p )       [X]
+( display-solution )**           [X]
+( exploredp )**                  [X] 
+   -> (member-state-p)**         [X] 
+      -> (equal-state-p)**       [X] 
+         -> (equal-bank-p)**     [X]
+( display-e-node )               [X]
+( children-of )                  [X]
+   -> ( apply-operator )         [X]
+( applicable-p )                 [X]
+( copy-state )                   [X]
+
+;; UNDEFINED OPERATORS
+*trace-search* ;; line 154       [X]
+
+;; SCRAPPED CODE
+   ; ( setf *move-lr-1* 
+      ; ( make-instance 'operator
+         ; :name 'move-lr-1
+         ; :precondition "left-bank is not empty"
+         ; :description "move single entity from left bank to right bank"
+      ; )
+   ; )
+   ; ( setf *move-rl-1* 
+      ; ( make-instance 'operator
+         ; :name 'move-rl-1
+         ; :precondition "right-bank is not empty"
+         ; :description "move single entity from right bank to left bank"
+      ; )
+   ; )
+   
+   ; ( name :accessor state-name :initarg :name )
+   ; ( parent :accessor state-parent )
+
+; ( defmethod display-explored-states ()
+   ; ( print1 'EXPLORED ) ( terpri ) (terpri)
+   ; ( mapcar #'display-state *explored* )
+   ; ( terpri )
+   ; nil
+; ) 
+
+; ( defmethod display-unexplored-states ()
+   ; ( print1 'UNEXPLORED ) ( terpri ) (terpri)
+   ; ( mapcar #'display-state *unexplored* )
+   ; ( terpri )
+   ; nil
+; )
+
+; ( defmethod move-lr-c ( (rb bank) (lb bank) )
+    ; remove from left bank
+    ; (setf (bank-boat lb)
+          ; NIL)
+    ; (setf (bank-cannibals lb)
+          ; (remove-n (bank-cannibals lb) 1))
+    ; add to right bank
+    ; (setf (bank-boat rb)
+          ; 'B)
+    ; (setf (bank-cannibals rb)
+          ; (add-n (bank-cannibals rb) 1 'C))
+; )
+
+; ( defmethod move-lr-cc ( (rb bank) (lb bank) )
+    ; remove from left bank
+    ; (setf (bank-boat lb)
+          ; NIL)
+    ; (setf (bank-cannibals lb)
+          ; (remove-n (bank-cannibals lb) 2))
+    ; add to right bank
+    ; (setf (bank-boat rb)
+          ; 'B)
+    ; (setf (bank-cannibals rb)
+          ; (add-n (bank-cannibals rb) 2 'C))
+; )
+
+; ( defmethod move-lr-m ( (rb bank) (lb bank) )
+    ; remove from left bank
+    ; (setf (bank-boat lb)
+          ; NIL)
+    ; (setf (bank-missionaries lb)
+          ; (remove-n (bank-missionaries lb) 1))
+    ; add to right bank
+    ; (setf (bank-boat rb)
+          ; 'B)
+    ; (setf (bank-missionaries rb)
+          ; (add-n (bank-missionaries rb) 1 'M))
+; )
+
+; ( defmethod move-lr-mm ( (rb bank) (lb bank) )
+    ; remove from left bank
+    ; (setf (bank-boat lb)
+          ; NIL)
+    ; (setf (bank-missionaries lb)
+          ; (remove-n (bank-missionaries lb) 2))
+    ; add to right bank
+    ; (setf (bank-boat rb)
+          ; 'B)
+    ; (setf (bank-missionaries rb)
+          ; (add-n (bank-missionaries rb) 2 'M))
+; )
+
+
+
+; ( defmethod move-rl-c ( (rb bank) (lb bank) )
+    ; remove from right bank
+    ; (setf (bank-boat rb)
+          ; NIL)
+    ; (setf (bank-cannibals rb)
+          ; (remove-n (bank-cannibals rb) 1))
+    ; add to left bank
+    ; (setf (bank-boat lb)
+          ; 'B)
+    ; (setf (bank-cannibals lb)
+          ; (add-n (bank-cannibals lb) 1 'C))
+; )
+
+; ( defmethod move-rl-cc ( (rb bank) (lb bank) )
+   ; remove from right bank
+    ; (setf (bank-boat rb)
+          ; NIL)
+    ; (setf (bank-cannibals rb)
+          ; (remove-n (bank-cannibals rb) 2))
+    ; add to left bank
+    ; (setf (bank-boat lb)
+          ; 'B) 
+    ; (setf (bank-cannibals lb)
+          ; (add-n (bank-cannibals lb) 2 'C))
+; )
+
+; ( defmethod move-rl-m ( (rb bank) (lb bank) )
+   ; remove from right bank
+    ; (setf (bank-boat rb)
+          ; NIL)
+    ; (setf (bank-missionaries rb)
+          ; (remove-n (bank-missionaries rb) 1))
+    ; add to left bank
+    ; (setf (bank-boat lb)
+          ; 'B)
+    ; (setf (bank-missionaries lb)
+          ; (add-n (bank-missionaries lb) 1 'M))
+; )
+
+; ( defmethod move-rl-mm ( (rb bank) (lb bank) )
+   ; remove from right bank
+    ; (setf (bank-boat rb)
+          ; NIL)
+    ; (setf (bank-missionaries rb)
+          ; (remove-n (bank-missionaries rb) 2))
+    ; add to left bank
+    ; (setf (bank-boat lb)
+          ; 'B)
+    ; (setf (bank-missionaries lb)
+          ; (add-n (bank-missionaries lb) 2 'M))
+; )
+
+; ( prin1 ( state-name s ) )
+   ; ( write-string " " )
+   ; ( if ( not ( rootp s ) )
+      ; ( let ()
+         ; ( prin1 (state-name ( state-parent s )) )
+         ; ( write-string " " )
+         ; ( print-new-line (operator-name ( state-operator s )) )
+      ; )
+      ; ( terpri )
+   ; )
+   
+   
+; ( defmethod apply-operator ( o c )
+   ; ( cond
+      ; ( ( eq (operator-name o) 'move-lr-c )
+         ; ( move-lr-c (state-left-bank c) (state-right-bank c) ) 
+      ; )
+      ; ( ( eq (operator-name o) 'move-lr-cc )
+         ; ( move-lr-cc (state-left-bank c) (state-right-bank c) ) 
+      ; )
+      ; ( ( eq (operator-name o) 'move-lr-m )
+         ; ( move-lr-m (state-left-bank c) (state-right-bank c) ) 
+      ; )
+      ; ( ( eq (operator-name o) 'move-lr-mm )
+         ; ( move-lr-mm (state-left-bank c) (state-right-bank c) ) 
+      ; )
+      ; ( ( eq (operator-name o) 'move-rl-c )
+         ; ( move-lr-c (state-left-bank c) (state-right-bank c) ) 
+      ; )
+      ; ( ( eq (operator-name o) 'move-rl-cc )
+         ; ( move-lr-cc (state-left-bank c) (state-right-bank c) ) 
+      ; )
+      ; ( ( eq (operator-name o) 'move-rl-m )
+         ; ( move-lr-m (state-left-bank c) (state-right-bank c) ) 
+      ; )
+      ; ( ( eq (operator-name o) 'move-rl-mm )
+         ; ( move-lr-mm (state-left-bank c) (state-right-bank c) ) 
+      ; )
+   ; )
+; )
+
+   ; ( setf new-node ( make-instance 'node ) )
+   ; ( setf ( node-name new-node ) ( next *ng* ) )
+   ; ( setf ( node-parent new-node ) n )
+   ; ( setf ( node-operator new-node ) o )
+   ; ( setf c ( copy ( node-state n ) ) )
+   ; ( apply-operator o (node-state n) )    
+   ; ( setf ( node-state new-node ) c )
+   ; new-node

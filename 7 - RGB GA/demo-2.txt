@@ -1,0 +1,22 @@
+;; Brandon Druschel
+;; 11/9/18
+;; RBG GA TASK 2 DEMO
+
+[16]> (load "rbg.l")
+;; Loading file rbg.l ...
+;; Loaded file rbg.l
+T
+[17]> (setf s (rbg-string) )
+(B B G B R R G G G B R R R G B R G B B G G R G G G)
+[18]> s
+(B B G B R R G G G B R R R G B R G B B G G R G G G)
+[19]> (setf s (mutation s) )
+(B B G B R R G G R B R R R G B R G B B G G R G G G)
+[20]> (setf s (mutation s) )
+(G B G B R R G G R B R R R G B R G B B G G R G G G)
+[21]> (setf s (mutation s) )
+(G B G B R R G G R B R R B G B R G B B G G R G G G)
+[22]> (setf s (mutation s) )
+(G B G B G R G G R B R R B G B R G B B G G R G G G)
+[23]> (bye)
+Bye.

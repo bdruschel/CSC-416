@@ -1,0 +1,339 @@
+;; Brandon Druschel
+;; 12/13/18
+;; TSP GA: Copy Demo
+
+[16]> (perform-copies-demo)
+
+
+
+Generation 1 population...
+
+
+
+
+the sample of individuals ...
+51    (A I K G B F H D E J C) 2900
+70    (H K I D C A J E B F G) 1498
+49    (F J C A D B H K G I E) 4033
+3     (J I H F B G A K E C D) 902
+2     (F G B A H K C I D J E) 3295
+58    (A J E B H K G D F I C) 1498
+10    (C H G A D J K I E B F) 1461
+67    (I A C G J K H F D E B) 2406
+
+the most fit of the sample ...
+3     (J I H F B G A K E C D) 902
+
+Selected individual =
+3     (J I H F B G A K E C D) 902
+Possibly muted individual =
+3     (B I H F J G A K E C D) 902
+Renumbered individual =
+1     (B I H F J G A K E C D) 902
+
+
+
+Generation 1 population...
+
+1     (B I H F J G A K E C D) 902
+
+
+
+the sample of individuals ...
+29    (A H D J G I C K E B F) 2922
+48    (G K A B I C E F J H D) 3564
+63    (D A E B K G C J H F I) 416
+7     (C H J K B A E G F D I) 416
+21    (J K D A H B G F C E I) 4015
+76    (D A I J B E F G C K H) 2121
+97    (H C B D G I K J A E F) 416
+29    (A H D J G I C K E B F) 2922
+
+the most fit of the sample ...
+63    (D A E B K G C J H F I) 416
+
+Selected individual =
+63    (D A E B K G C J H F I) 416
+Possibly muted individual =
+63    (D A E I K G C J H F B) 416
+Renumbered individual =
+2     (D A E I K G C J H F B) 416
+
+
+
+Generation 1 population...
+
+1     (B I H F J G A K E C D) 902
+2     (D A E I K G C J H F B) 416
+
+
+
+the sample of individuals ...
+26    (I J F H D K B C A G E) 1091
+67    (I A C G J K H F D E B) 2406
+57    (C A E H G J K B I F D) 416
+96    (B K C A F E G J H I D) 339
+86    (H C B F A D J I G K E) 2114
+32    (B C J G I A K E H D F) 902
+47    (J I A H F K C G D E B) 2185
+45    (G B A F J H D E C K I) 1416
+
+the most fit of the sample ...
+96    (B K C A F E G J H I D) 339
+
+Selected individual =
+96    (B K C A F E G J H I D) 339
+Possibly muted individual =
+96    (B K C A F E G J H I D) 339
+Renumbered individual =
+3     (B K C A F E G J H I D) 339
+
+
+
+Generation 1 population...
+
+1     (B I H F J G A K E C D) 902
+2     (D A E I K G C J H F B) 416
+3     (B K C A F E G J H I D) 339
+
+
+
+the sample of individuals ...
+11    (A B H J D G F K C E I) 5019
+29    (A H D J G I C K E B F) 2922
+93    (A B C H K D I F G E J) 5083
+45    (G B A F J H D E C K I) 1416
+97    (H C B D G I K J A E F) 416
+12    (J B G C F I A H K D E) 1687
+84    (I C D K A E J H F G B) 416
+76    (D A I J B E F G C K H) 2121
+
+the most fit of the sample ...
+97    (H C B D G I K J A E F) 416
+
+Selected individual =
+97    (H C B D G I K J A E F) 416
+Possibly muted individual =
+97    (H C B D G I K J A E F) 416
+Renumbered individual =
+4     (H C B D G I K J A E F) 416
+
+
+
+Generation 1 population...
+
+1     (B I H F J G A K E C D) 902
+2     (D A E I K G C J H F B) 416
+3     (B K C A F E G J H I D) 339
+4     (H C B D G I K J A E F) 416
+
+
+
+the sample of individuals ...
+89    (G F K A C E H B I D J) 1141
+33    (G B J A H F D I K C E) 2616
+37    (J H I A G K E D F B C) 1167
+60    (H I A F E C G B D K J) 339
+3     (B I H F J G A K E C D) 902
+99    (I A H G E F B C D J K) 1669
+11    (A B H J D G F K C E I) 5019
+51    (A I K G B F H D E J C) 2900
+
+the most fit of the sample ...
+60    (H I A F E C G B D K J) 339
+
+Selected individual =
+60    (H I A F E C G B D K J) 339
+Possibly muted individual =
+60    (H I A F E C G B D K J) 339
+Renumbered individual =
+5     (H I A F E C G B D K J) 339
+
+
+
+Generation 1 population...
+
+1     (B I H F J G A K E C D) 902
+2     (D A E I K G C J H F B) 416
+3     (B K C A F E G J H I D) 339
+4     (H C B D G I K J A E F) 416
+5     (H I A F E C G B D K J) 339
+
+
+
+the sample of individuals ...
+91    (B D H G A J E I C K F) 1498
+63    (D A E I K G C J H F B) 416
+75    (A D K B J F G C E I H) 5767
+65    (I D G C H B F J A E K) 416
+74    (C J F A I H G E D K B) 3390
+63    (D A E I K G C J H F B) 416
+39    (F A I D H J G K C B E) 3101
+49    (F J C A D B H K G I E) 4033
+
+the most fit of the sample ...
+63    (D A E I K G C J H F B) 416
+
+Selected individual =
+63    (D A E I K G C J H F B) 416
+Possibly muted individual =
+63    (D A E I K G C J H F B) 416
+Renumbered individual =
+6     (D A E I K G C J H F B) 416
+
+
+
+Generation 1 population...
+
+1     (B I H F J G A K E C D) 902
+2     (D A E I K G C J H F B) 416
+3     (B K C A F E G J H I D) 339
+4     (H C B D G I K J A E F) 416
+5     (H I A F E C G B D K J) 339
+6     (D A E I K G C J H F B) 416
+
+
+
+the sample of individuals ...
+14    (A D K G E C B F I J H) 2402
+58    (A J E B H K G D F I C) 1498
+56    (F B I A E K D C H G J) 416
+89    (G F K A C E H B I D J) 1141
+93    (A B C H K D I F G E J) 5083
+88    (A K I J B D F C H G E) 5450
+44    (G I K F C A D B E J H) 977
+82    (B A G H C J D I F E K) 2497
+
+the most fit of the sample ...
+56    (F B I A E K D C H G J) 416
+
+Selected individual =
+56    (F B I A E K D C H G J) 416
+Possibly muted individual =
+56    (F B D A E K I C H G J) 416
+Renumbered individual =
+7     (F B D A E K I C H G J) 416
+
+
+
+Generation 1 population...
+
+1     (B I H F J G A K E C D) 902
+2     (D A E I K G C J H F B) 416
+3     (B K C A F E G J H I D) 339
+4     (H C B D G I K J A E F) 416
+5     (H I A F E C G B D K J) 339
+6     (D A E I K G C J H F B) 416
+7     (F B D A E K I C H G J) 416
+
+
+
+the sample of individuals ...
+99    (I A H G E F B C D J K) 1669
+1     (K H F A I D B C G J E) 3656
+31    (J I B A E D K H G F C) 416
+13    (J A B E D C F G K H I) 1071
+73    (I A H F K J B D C E G) 3832
+3     (B K C A F E G J H I D) 339
+36    (A F K G J H D C E B I) 2739
+10    (C H G A D J K I E B F) 1461
+
+the most fit of the sample ...
+3     (B K C A F E G J H I D) 339
+
+Selected individual =
+3     (B K C A F E G J H I D) 339
+Possibly muted individual =
+3     (C K B A F E G J H I D) 339
+Renumbered individual =
+8     (C K B A F E G J H I D) 339
+
+
+
+Generation 1 population...
+
+1     (B I H F J G A K E C D) 902
+2     (D A E I K G C J H F B) 416
+3     (C K B A F E G J H I D) 339
+4     (H C B D G I K J A E F) 416
+5     (H I A F E C G B D K J) 339
+6     (D A E I K G C J H F B) 416
+7     (F B D A E K I C H G J) 416
+8     (C K B A F E G J H I D) 339
+
+
+
+the sample of individuals ...
+75    (A D K B J F G C E I H) 5767
+2     (F G B A H K C I D J E) 3295
+11    (A B H J D G F K C E I) 5019
+13    (J A B E D C F G K H I) 1071
+6     (B H I C D A G F E K J) 969
+79    (F A D E K I G H J C B) 213
+23    (I F H C A B J G E K D) 2971
+72    (C F H J K A G B D E I) 1864
+
+the most fit of the sample ...
+79    (F A D E K I G H J C B) 213
+
+Selected individual =
+79    (F A D E K I G H J C B) 213
+Possibly muted individual =
+79    (F A D E K I G H J C B) 213
+Renumbered individual =
+9     (F A D E K I G H J C B) 213
+
+
+
+Generation 1 population...
+
+1     (B I H F J G A K E C D) 902
+2     (D A E I K G C J H F B) 416
+3     (C K B A F E G J H I D) 339
+4     (H C B D G I K J A E F) 416
+5     (H I A F E C G B D K J) 339
+6     (D A E I K G C J H F B) 416
+7     (F B D A E K I C H G J) 416
+8     (C K B A F E G J H I D) 339
+9     (F A D E K I G H J C B) 213
+
+
+
+the sample of individuals ...
+19    (C B A G H I D F J E K) 4410
+23    (I F H C A B J G E K D) 2971
+68    (A D J F H K I B E G C) 3039
+59    (B D I J F C H G A E K) 416
+67    (I A C G J K H F D E B) 2406
+51    (A I K G B F H D E J C) 2900
+33    (G B J A H F D I K C E) 2616
+90    (D F A I H C J K B E G) 3601
+
+the most fit of the sample ...
+59    (B D I J F C H G A E K) 416
+
+Selected individual =
+59    (B D I J F C H G A E K) 416
+Possibly muted individual =
+59    (G D I J F C H B A E K) 416
+Renumbered individual =
+10    (G D I J F C H B A E K) 416
+
+
+
+Generation 1 population...
+
+1     (B I H F J G A K E C D) 902
+2     (D A E I K G C J H F B) 416
+3     (C K B A F E G J H I D) 339
+4     (H C B D G I K J A E F) 416
+5     (H I A F E C G B D K J) 339
+6     (D A E I K G C J H F B) 416
+7     (F B D A E K I C H G J) 416
+8     (C K B A F E G J H I D) 339
+9     (F A D E K I G H J C B) 213
+10    (G D I J F C H B A E K) 416
+
+
+
+NIL

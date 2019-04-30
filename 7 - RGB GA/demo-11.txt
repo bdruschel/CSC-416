@@ -1,0 +1,523 @@
+;; Brandon Druschel
+;; 12/13/18
+;; RBG GA TASK 11: The Genetic Algorithm Demo
+
+[6]> (load "rbg.l")
+;; Loading file rbg.l ...
+;; Loaded file rbg.l
+T
+[7]> (ga-text-demo)
+THE WORLD IS BLUE
+
+
+
+
+Generation 0 population...
+
+1     (R G G R R G R B R R B G B B B R R B B B G R R R G) 8
+2     (R R B R G R G B R B G G G B R R G R R R R B R G R) 5
+3     (B B G G R B G R G G B R B B R B B R B R R R R G B) 10
+4     (G B G B B G B G G B G B B G G B R R R R R G G G R) 8
+5     (B B B B R R R G R G R R R G B B R G R G B B B R B) 10
+6     (B G G B B R R B R G B R B G G R G B R R G G G R R) 7
+7     (G B G B B G B G G B G B B B G B G B B B B G G G B) 14
+8     (R B G R R G R R R R G R R B B R R B G R G R G B R) 5
+9     (R R G G R B R G B R R B R B B B B R R G G G B R R) 8
+10    (R G G G G G B R R B G R B R G R B R R B B R B R R) 7
+11    (B R R B B B R R G R R R G R G G B B B B B R B R G) 10
+12    (B G G G R R R B G R R G G G B B G R R G G B B R R) 6
+13    (R B B B G B G G R R B G B R B R R B G B G R B G R) 10
+14    (G R B R G R B R R G G G B B G B B G B B G G G G R) 8
+15    (R R B R B B B B B R R R R G R G B B B B B R G R G) 11
+16    (R R R R B R B R R R G G B R B R G B B R R R G G B) 7
+17    (G G R R G R B B G G G R R B G R R R R G R B B B G) 6
+18    (B G G R R R G G B B R R B R B R B B B B G R B B B) 12
+19    (B R B R B R R B G G B G G R B R R R R B G R G G B) 8
+20    (B B G G G R R G B R G R G B G B B B B G R G B R G) 9
+21    (R G B G R R B G G B B B R R B G R B B B B B R G R) 11
+22    (R G R B G R G R B R G G B G G R G R B R R G G R R) 4
+23    (R G B B R G G G R R B B B G G G R G R G R G B R B) 7
+24    (R B G G B G R R B B B R R G R B G G R G R R B R R) 7
+25    (G B G B B G B R G G R B R G B B G R B G R B B R G) 10
+26    (G B R G B R R R G G B G B G G R B B R R G R G B R) 7
+27    (G G G R G G B B G G R R B R B B R G G R R R R B G) 6
+28    (R B R G B B R B B R R R B B R R B G G G R B G G G) 9
+29    (B G R B R B G R G R G G B B B B G R R G R G G B G) 8
+30    (B G G G B B G G G R B B R B B R G R G R R B G G R) 8
+31    (R G G G G R R B G R B G B B G B B B B G R R G R B) 9
+32    (R B B G G G R R B G R B G R B G R R G R B B B G R) 8
+33    (B R R G B B B B R R B B G B B G R G G B B B R B G) 13
+34    (G B G R G B B R R R R B B B R G G G G R R G G G R) 6
+35    (R B B R G G R R B R R G R B R G G G R B R G G R G) 5
+36    (R R G R G B B B G G G B R R G R G B B B R R G G B) 8
+37    (R B B R R B R G B B R B R R R G R B R G R G R R B) 8
+38    (B R R G R B G B R B B R B R B R B B G G B G G G B) 11
+39    (R G R R G B B R B B R R R G B B B R R R G R G G G) 7
+40    (B B R G R B B G B G R B R G G B R B G R G R B B B) 11
+41    (B B G B B R B G B G R R G G G B G G G G R G G B G) 8
+42    (B G G R B B R R B R R R R G B B R G R G G B R B R) 8
+43    (R R R B R B G B G B R B R R R B R B B R B B G G R) 10
+44    (G B B G B R B B R G G G B B G G B B R R B B B G B) 13
+45    (R G G G B G B G B R G B G R B R R G G G G R G B B) 7
+46    (G R R B R B R G B R B B B G R B R B R R B B B B G) 12
+47    (R G B R R B B B B G B R B R R R R B B R G R B B G) 11
+48    (G G G B G B B R R B R G G G G G R G B B R R B B R) 8
+49    (B G G G R B R R R G R B G R G R G R R G G R B G G) 4
+50    (R R B R B B B R R R B R B R B B G B G G R R R R B) 10
+51    (B G G G B R R G G R G R B G R B G B R B G G B B R) 8
+52    (R B R B G B G G B G R B B R B G B G B G G G B G R) 10
+53    (R G G R R B R G B G R R G B R G B R R G R R G B G) 5
+54    (G G G G G R G R G B B R G R R G G B B G R G R B B) 6
+55    (B R R G R G G G B G G R B G R B R R R R B R G R B) 6
+56    (B B B G G G R G B B B B G B R B R R G B R R R G B) 11
+57    (B G R G R B G G R G R G G G R B B B G G G B B B G) 8
+58    (R B R B B G B G R B R R G R R G B B G G R B G G R) 8
+59    (R B R B B G B G R G R R G B B G B G B R B R R R R) 9
+60    (R B R R G R G B R B G G R R B B G R B R B G G G G) 7
+61    (R G B G B R B R R B R B B R R G R R G G B R B G R) 8
+62    (R G R G R R R R R G R G R B G R G R R R B R G B B) 4
+63    (B R R B B R B B B B G R B G G G R R B R B R B G R) 11
+64    (G R G B B G G G R G B B G R G R R R R G R G B G G) 5
+65    (R R R B B G G B G R B B G B B B G G G G R B G G G) 9
+66    (B G G R B G B R G B B B R B B G R G B R B B R B G) 12
+67    (R B R G G B G R R G G B B R B G G G R B B G G B B) 9
+68    (B R R G G G G R G G G R R B G B R R B R B B G R G) 6
+69    (G B B G B B R G B B G G B B B G R B B G R G G B R) 12
+70    (B G R B R B G B G G B G G G B B B G G R G G R R B) 9
+71    (R R R B G G G B B R G G G R B R G R G R R B G G B) 6
+72    (B B B G B G B B R B G B B B B G R G B B R B R G R) 14
+73    (G R G R R R R R R B G B B R R R B R R G G G G R B) 5
+74    (B B R R B R R R R G R R G G B B B R G G R R B R B) 8
+75    (G G B R G G R R G G G B R R R G G B B R G G R B R) 5
+76    (B B R G R R R B B B G R R B R B B G R R G B R G G) 9
+77    (B G G B B B R B G G R G R R B R R R B B R G B B G) 10
+78    (R R B R G G G R R B G B R G B B B G G B B B G B G) 10
+79    (G R G B G R G R G R R B R R G R B R R B B G G G G) 5
+80    (G B R B G B B G R R R R R G G R G R B R R G G R G) 5
+81    (B B R B R R R R G R R G B R B B B R G G B R B B G) 10
+82    (G G B G B R R R B B G R R B G B R R R G G R G R G) 6
+83    (B R B R R G B R R R B G R R R R R R G B B B G G R) 7
+84    (G G B R B R G G R R G G B G B B B B B R R G R R G) 8
+85    (B R B B G B B G R G B R B R G G B R R G R B G R G) 9
+86    (B B G B B G B R G G R R B R B B R G R B B R G R G) 10
+87    (R R R G G B R G B B R G B R B G R B B R R G R R R) 7
+88    (G B R G R R G R G B G B B R G B R B R R R B G G R) 7
+89    (R G B G R R G B B G R B G B B R R G R B B B G G B) 10
+90    (G G G B R B R G R B B R R B G B B G G G R R R R G) 7
+91    (B B G G B B G B B R B B G B G R R G R R G G R G R) 9
+92    (G R G G B R B B G B G R R R R G R G B G G G B B R) 7
+93    (B B R R B B R B B B R G B R G B B R G G R B R B G) 12
+94    (R B G G R R R G R G R R B R R R B R G R R B G R G) 4
+95    (R R G G B R G B B R G R R G G G B B R R G B G B G) 7
+96    (G B G B G G B B G B R B G R G R B B G R G B G G B) 10
+97    (R R R R R R G R G B R R R G R G R B R R R G B G G) 3
+98    (G R G G G B B B B B G B G G B B G B G B R B B G B) 13
+99    (R G G G G G B B G G B R R R R G B G R B G G R G G) 5
+100   (G G R B B G R G R B R G R B R B R B B G R R G R G) 7
+
+average fitness of population 0 = 8.21
+
+average fitness of population 1 = 11.07
+average fitness of population 2 = 12.37
+average fitness of population 3 = 13.76
+average fitness of population 4 = 13.61
+average fitness of population 5 = 12.0
+average fitness of population 6 = 14.13
+average fitness of population 7 = 14.74
+average fitness of population 8 = 14.05
+average fitness of population 9 = 15.25
+average fitness of population 10 = 16.69
+average fitness of population 11 = 14.59
+average fitness of population 12 = 14.87
+average fitness of population 13 = 16.23
+average fitness of population 14 = 14.39
+average fitness of population 15 = 13.8
+average fitness of population 16 = 14.68
+average fitness of population 17 = 16.08
+average fitness of population 18 = 13.89
+average fitness of population 19 = 15.83
+average fitness of population 20 = 15.66
+average fitness of population 21 = 16.27
+average fitness of population 22 = 16.02
+average fitness of population 23 = 17.14
+average fitness of population 24 = 17.75
+average fitness of population 25 = 17.65
+
+
+
+Generation 25 population...
+
+1     (B B B B B B B B B B G B B B B B G B B B R B B G R) 20
+2     (R B R B B B B B B R G B B B B G B B B B G G B R R) 17
+3     (R B B B B B B B B R G B B B R B B G R B B G G G R) 19
+4     (G B R B B B B B B G R R B B G G B G B B B G B R R) 14
+5     (R B B R B B B B B B R R B B B G B B B B B B G B B) 19
+6     (R B R B B B B B B R G B B B B G B B B B G G B R R) 16
+7     (B B B B B B G R R B G B B R B B B B B B B G G G R) 19
+8     (B B B R B G B B B G G B B B R B B G R B B G G G R) 20
+9     (R B R B B B B B B R G B B B B G B B B B G G B R R) 16
+10    (B B B B B B B B B B G B B B B B G B B B R B B G R) 20
+11    (R B R B B B B B B R G B B B B G B B B B G G B R R) 16
+12    (R B R B B B B B B R G B B B B G B B B B G G B R R) 16
+13    (G B B B B B B B B B G B B B B B G B B B R B B G R) 19
+14    (G B R B B B B R B R G B B B B G B B B B G G B R R) 14
+15    (G B B B B B B B B B B B B R R B B R B B B B R G G) 18
+16    (G B B R B B B B B G R B B B R B B G R B B G G G R) 18
+17    (B B B B G R B B B G G B B B R B B G R B B G G G R) 19
+18    (B B B B B B G R R B G B B R B B B B B B B G G G R) 19
+19    (G B B B B R R B B B R B B B B B B B B B B B B B R) 19
+20    (G B B B B R R B B B R B B B B B B B B B B B B B R) 19
+21    (G B B B B B B B B R R B B R G G B B B B B G G G R) 17
+22    (R R B B B B B B B G R R B B G G B G B B B G B R R) 14
+23    (G B B R B B B B B B R B B B G G B B B B B B G G R) 17
+24    (B B B B B B G R R B G B B R B B B B B B B G G G R) 17
+25    (B B B R B G B B B G G B B B R B B G R B B G G G R) 18
+26    (G B B B B R R B B B R B B B B B B B B B B B B B R) 19
+27    (B B B B B B B B B B G B B B B B G B B B R B B G R) 21
+28    (G B B R B B B B B G R B B B R B B G R B B G G G R) 18
+29    (R B R B B B B B B R G B B B B G B B B B G G B R R) 15
+30    (G B B B B B B B B R R B B R G G B B B B B G G G R) 16
+31    (G B B R B G B B B G G B B B R B B G R B B G G G R) 18
+32    (B B B R B G B B B G G B B B R B B G R B B G G G R) 19
+33    (R B R B B B B B B R G B B B B G B B B B G G B R R) 15
+34    (B B B R B G B B B G G B B B R B B G R B B G G G R) 19
+35    (B B B B B B B B B B G B B B R B B G R B B G G G R) 21
+36    (R B R B B B B B B R G B B B B G B B B B G G B R R) 15
+37    (G B B B B R R B B B R B B B B B B B B B B B B B R) 19
+38    (G B B R B B B B B G R B B B R B B G R B B G G G R) 17
+39    (B B B R B G B B B G G B B B R B B G R B B G G G R) 18
+40    (B B B R B G B B B G G B B B R B B G R B B G G G R) 18
+41    (G B R B B R R B B B R B B B G G B G B B B G B R R) 13
+42    (B B B R B G B B B G B B G B R B B G R B B G G G R) 17
+43    (G B B B B R R B B B R B B B B B G B B B R B B G R) 18
+44    (G B R B R B B B B G G B B B R B B G R B B G G G R) 17
+45    (B B B R B B G B B G B B B B R B B G R B B G G G R) 18
+46    (B B B B B B B B B B G B B R B B G B B B R B B G R) 20
+47    (B B B R B B B B B G B B B B R B B G R B B G G G R) 19
+48    (R B R R B G B B B G G B B B R B B G R B B G G G R) 16
+49    (R B R B B B B B B R G B B B B G B B R B B G G G R) 17
+50    (G B B B R B B B B G R R B B G G B G B B B G B R R) 14
+51    (B B B B B B B B B B G B B B B B G B B B R B B G R) 20
+52    (B B B R B G B B B G B B B B B B R G B B B R G B R) 17
+53    (G B R B B B B B B B R B B B B B B B B B B B B B R) 21
+54    (G B B B B B B B B R R B B B R B B G R B B G G G R) 17
+55    (B B B R B B G B B G B B B B R B G B B B R B B G R) 17
+56    (G B B B B B B B B B G B B B R B B G R B B G G G R) 19
+57    (B B B R B G B B B G B B B G R B B B B B B G G G R) 17
+58    (B B B R B B B B B B G B B B B B B G B B R B B G R) 19
+59    (G B B B B R R B B B R B R B B B B B B B B G G G R) 17
+60    (G B B B B B B B B B B B B B B G B B B B G G B R R) 18
+61    (G B B R B G B B B G B B B B R G B G B B B G G B R) 15
+62    (R B R B G B B B B R G B B B R B B G R B B G G G R) 15
+63    (G B B B B R R B B B R B B B B B B B B B G G B R R) 16
+64    (R B B R B B B B B B R B B R G G B B B B B B B R R) 16
+65    (G B B B B G B B B G B B B B R B B G B B B B G B B) 19
+66    (G B B B B B B B B B R B B B B B G B B B B G G G R) 19
+67    (B B B R B B G B B G B B B B R B B G G B R B B G R) 16
+68    (B B B R B B B B B G B B B B R B B B B B R B B G R) 19
+69    (R B R B B B B B B G R R B B G G B G B B B G B R R) 15
+70    (B B B B B B B B B B G B B B B B G B B B R G B G R) 19
+71    (B B B B B B B B B B G B B B R B B G R B B G G G R) 20
+72    (G B B B B B B B B R R B B R G G B B B B B G G G R) 16
+73    (R R R B B B B B B R G B B B B G B B B B G G B G R) 16
+74    (R B B R B B B B B B R R B B B G B B B B B B G B B) 19
+75    (G B B R B B B B B B G B B B G G B B B B B B G G R) 18
+76    (B B B R B B G B B G B B B B R B B G B B B G G B R) 17
+77    (B B B B B B B B B B R R B B G G B G B B B G B R R) 17
+78    (G B R B B B B B B B G B B B R B B R B B R B B G R) 17
+79    (B B B B B B B B B B G B B B B B G B B B R B B G R) 20
+80    (G R B B R B B B B G B B B B R B B G B B R B B G R) 16
+81    (G B B B B B B B R R R B B B G G B G B B B G B R R) 15
+82    (B B B B B B B B B B B B B B R B B G B B B G G G R) 20
+83    (R B R B B B B B R R G B B B B G B B B B G G B R R) 15
+84    (G B B B B R R B B B G B B B R B B G R B B G G G R) 16
+85    (B B B B B B B B B B G B B B B B B B B B B G G G R) 21
+86    (B B B B B B B B B B G B B B B B G B B B B B B B R) 22
+87    (R B B B B B B B B R G B B B R B B G R B B G G G R) 17
+88    (B B B B B R B B B B G B B B B B G B B B B B B B R) 21
+89    (G B B B B B B B B B G B B B R B B G R B B G G G R) 18
+90    (G B B B B B B B B R G B B B B G B B B B G G B R R) 17
+91    (G B B G B B B B B B R B B B B B B B B B B B B B R) 21
+92    (R B R B B B B B B B G B B B B B G B B B R B B G R) 18
+93    (G B B B B B B B B B G B B B B B G B B B R B B G R) 19
+94    (R B R B B B B B B B G B B B B B G B B B R B B G R) 18
+95    (B B B B B B B B B B R B B R G G B B B B B G G G R) 17
+96    (B B B B B B B B B B G B B B R B B G R B B G G G R) 17
+97    (B B B B B B B B B B G B B B B B G B B B R B B G R) 20
+98    (B B B B B B R B B B G B B B R B B G R B B G G G R) 16
+99    (B B B B B B G B B B G B B B R B B B B B R B B G R) 19
+100   (G R B B R B B B B G G B B B R G B G R B B B B G R) 14
+
+average fitness of population 25 = 17.65
+
+THE WORLD IS RED
+
+average fitness of population 26 = 3.97
+average fitness of population 27 = 7.09
+average fitness of population 28 = 7.4
+average fitness of population 29 = 10.14
+average fitness of population 30 = 9.4
+average fitness of population 31 = 9.98
+average fitness of population 32 = 9.85
+average fitness of population 33 = 10.84
+average fitness of population 34 = 10.68
+average fitness of population 35 = 10.15
+average fitness of population 36 = 12.31
+average fitness of population 37 = 10.9
+average fitness of population 38 = 12.05
+average fitness of population 39 = 13.5
+average fitness of population 40 = 13.61
+average fitness of population 41 = 13.62
+average fitness of population 42 = 13.36
+average fitness of population 43 = 15.3
+average fitness of population 44 = 15.58
+average fitness of population 45 = 16.42
+average fitness of population 46 = 17.41
+average fitness of population 47 = 17.12
+average fitness of population 48 = 15.72
+average fitness of population 49 = 15.35
+average fitness of population 50 = 16.71
+
+
+
+Generation 50 population...
+
+1     (R R R R G R R R R B R B R G R R G R R R B G R G B) 18
+2     (R R R R G R R R R B R B R G R R G R R R B G R G B) 18
+3     (R R G R G R R R R B R B R R R B G R R R B G R G B) 18
+4     (R R R R R B G R R R R R R G R B R R G R R R G B B) 19
+5     (G R R R R B R R R B R G R G R R G R R R B G R G B) 18
+6     (R R R R G B R R R B R G R G R R G R R R B G R G B) 18
+7     (G G R B G R G B R B R R R R R G R B B R R R G G B) 17
+8     (R R R R G B R R R B R G R G R R G R R R B G R G B) 17
+9     (R R R R G R R R R G R B R R R B R R B R G R G R B) 18
+10    (R R R R R B G R R R R R R G R B R R G R R R G B B) 18
+11    (G R R R R B R R G B R R R G G B B R R R R G R G B) 18
+12    (R R G R G R R R R B R B R R R B G R R R B G R G B) 17
+13    (R R R R G R R R R R R R B G G R R G B G G R B G B) 19
+14    (R R R R B R R R R B R B R R R G B R B G G R B G B) 18
+15    (R B R R G R B R R B R G R G R R G R R R B G R G B) 16
+16    (R R R R B R R R R R B G R G G R R G B G G R B G B) 17
+17    (R R R R G B R R R B R G R G R R G R R R B G R G B) 17
+18    (R R R R R B G R R R R R R G R B R R G R R R G B B) 18
+19    (R R R R G R B R B B R B R R R R B R B R G G R G B) 17
+20    (G R R R R B R R G B R R R G G B B R R R R G R G B) 17
+21    (R R R R B R R R R R B G R G G R R G B G G R B G B) 18
+22    (R R R R G R R R R B R B R G R R G R R R B G R G B) 17
+23    (R R R R G R B R B B R B R R R R B R B R G G R G B) 16
+24    (R R G R G R R R R B R B R R R B G R R R B G R G B) 17
+25    (R R R R G B R R R B R G R G R R G R R R B G R G B) 18
+26    (G G R B G R G B R B R R R R R G R B B R R R G G B) 16
+27    (R R R R G R R R R R R R B G G R R G B G G R B G B) 18
+28    (R R R R G R R R R G R R B G R R G R R R B G R G B) 19
+29    (R R R R G R R B R B R R R R R R G R R R B G R G B) 18
+30    (G G R B G R G B R B R R R R R G R B B R R R G G B) 15
+31    (R R R R G B R R R B R G R G R R G R R R B G R G B) 17
+32    (R R R R G R R R R G R R B G R R G R R R B G R G B) 19
+33    (R R R R R B G R R R R R R G R B R R G R R R G B B) 18
+34    (R R R R R B G R R R R R R G R B R R G R R R G B B) 19
+35    (R R R R B R R R R B R B R R R G B R B G G R B G B) 17
+36    (R R R R R B G R R R R R R G R B R R G R R R G B B) 19
+37    (R R G R G R R R R B R B R R R B G R R R B G R G B) 17
+38    (R R R R R B R R R B R R R R R G R B B R R R G G B) 20
+39    (R R R R R B G R R R R R R G R B R R G R R R G B B) 18
+40    (R R G R G R R R R B R B R R R B G R R R B G R G B) 17
+41    (G G R B G R G B R B R R R G R R G R R R B G R G B) 14
+42    (R B R R R B R R R G B R R G R R G G R R R R B G B) 17
+43    (R R R R G R R R R R R R R R R R B R B R G G R G B) 20
+44    (G G R B G R G B R B R R R R R G R R G R R R R G B) 16
+45    (R R R R R B R R R B R R R R R G R R B R R R G R R) 20
+46    (R R R R R B R R R B R R R R R R G R R G R B B R B) 19
+47    (R G R R G R B R B B R B R R R R B R B R G G R G B) 15
+48    (R R R R R B R R R B R G R G R R G R R R B G R G B) 18
+49    (G R R R R B R R R B R R R R R G R B B R R R G G B) 19
+50    (R B R R G B R R R B R G R G R R G R R R B G R G B) 16
+51    (R R R R G R R B R B R R R R R G R B B R R R G G B) 19
+52    (R R R R G B G R G B R R R G G B B R R R R G R G B) 16
+53    (G R R R R B R R R G R G R R R B B R R R B G R G B) 17
+54    (R R R R B R R R R B R G R G R R G R R R B G R G B) 17
+55    (R R R R G R R R R G B R B G R G G G B G G R B G B) 14
+56    (G R R R R R R R R G R G R B R B B R R R G R B G B) 17
+57    (R R R R G R G B R B R R R R R G R B B R R R G G B) 17
+58    (G R R R R B R R R R R R R G R B R R G R R R G B B) 18
+59    (R R R R R B G G R G R R R G R B R R R R B G R G B) 16
+60    (R R R R G R R R R G R B R G R B R R G R R R G B B) 18
+61    (R R R R G R B R G B R R R G G B B R R R R G R G B) 15
+62    (R R R R R B G R R B R R R R R R G R R R B G R G B) 17
+63    (R R R R R B G R R B R G R G R R G R R R B G R G B) 15
+64    (R R R R G R R B R B R R R R R B B R R R B G R G B) 17
+65    (G R R R R B R R R G R G R B R B B R R R B G R G B) 15
+66    (R R R R B R R R R R G G R G G R R G B R R R G B B) 16
+67    (R B G R G R R R R B R B R R R B G R R R B G R G B) 15
+68    (R R R R G B R R R G R G R B R B B B B R R R G G B) 14
+69    (R R R R R B G R R B R G R G R R G R R R B G R G B) 15
+70    (R R R R G R R R R B R B R R R R G R R G R B B B B) 17
+71    (R R R B G R R R R G R B R R R B R R B R G G R G B) 16
+72    (G R R R R B R R R G R G R B R B B R R R B G R G B) 15
+73    (R R R R G B R R R G R G R B R B B R R R B G R G B) 15
+74    (R R R R B R R R R B R B R R R G B R B G G R B G B) 16
+75    (R B R R G R B R R G R G R G R R G R R R B G R G B) 15
+76    (R R R R G R R R G R R R R G G B R G B G G R B G B) 14
+77    (G R R R R B R R R G R R B G R R G R R R B G R G B) 17
+78    (R R R R G R R R R G R B R R R B R R B R G R G R B) 18
+79    (R R R R G R R R R R R R R G R B R R G R R R G B B) 20
+80    (R R R R G R R R R B R B R R R B G R R R B G R G B) 17
+81    (R R R R G B R R R G R R B G R R G R R R B G R G B) 16
+82    (B R R R R B R R G B R B R R R B G R R R B G R G B) 15
+83    (R R G R G R R R R B R B R R R B B R G R R R G B B) 17
+84    (R R R R G R R R R R R R B G G R R G B G G R G R B) 16
+85    (R R R G R B B R B B R B R R R R B R B R G G R G B) 14
+86    (R R R R G R R R R G R B R R R B R R B R G G G G B) 16
+87    (R R R R G R R R R G R R B G R R G R R R B G R G B) 17
+88    (G G G B G R G B R B R R R R R G R B B R R R G G B) 12
+89    (R R R R G B R R R G R G R G R R R R G R R R G B B) 17
+90    (R R R R G R R R R G R R B G R R G R R R B G R G B) 17
+91    (R R R R R B G R R R R R R G G B R R G R R G R G B) 17
+92    (R R R R G R R R R G R B R R R B R R B R G G R G B) 17
+93    (G R R R R B R R G B R R R G G B B R R R R G R G B) 15
+94    (R R R R B R R R R R B G R G R R G R R R B G R G B) 16
+95    (G G R B G R G B R B B G R G G R R G B G G R B G B) 7
+96    (R R R R G B R R R B R G R G R R G R R R B G R G B) 15
+97    (R R R R R B G R R G R R B G R R G R R R B G R G B) 15
+98    (G G R B G R G B R B R R R R R G R B B R R R G B B) 12
+99    (R R R G G R R R R R R R R G R B R R G R R R G B B) 17
+100   (G R R R R B R R R B R G R G R R G R R R B G R G B) 15
+
+average fitness of population 50 = 16.71
+
+THE WORLD IS GREEN
+
+average fitness of population 51 = 4.75
+average fitness of population 52 = 7.95
+average fitness of population 53 = 9.44
+average fitness of population 54 = 10.99
+average fitness of population 55 = 10.82
+average fitness of population 56 = 10.98
+average fitness of population 57 = 11.69
+average fitness of population 58 = 11.34
+average fitness of population 59 = 13.87
+average fitness of population 60 = 14.86
+average fitness of population 61 = 13.08
+average fitness of population 62 = 13.63
+average fitness of population 63 = 12.86
+average fitness of population 64 = 13.41
+average fitness of population 65 = 14.29
+average fitness of population 66 = 14.59
+average fitness of population 67 = 14.94
+average fitness of population 68 = 15.52
+average fitness of population 69 = 14.89
+average fitness of population 70 = 15.82
+average fitness of population 71 = 16.74
+average fitness of population 72 = 17.56
+average fitness of population 73 = 18.29
+average fitness of population 74 = 16.56
+average fitness of population 75 = 14.86
+
+
+
+Generation 75 population...
+
+1     (G G G G G G B G G R B B G G G G G G R G R B B G G) 17
+2     (G G G G G B G G G G R G R G B B B G R G B B G G R) 16
+3     (G G G G G G G G G R R G G G G G G G R G R B B G G) 20
+4     (G B G R G G B G G R B B G G G G G G R G R B B G G) 14
+5     (G G G G G G B G G R B B G G G G G G R G R B B G G) 17
+6     (G G G G G G G G G R R G G G G G G G R G R B B G G) 19
+7     (G G G G G G G G G R R G G G G G G G R G R B B G G) 19
+8     (G B G R G G B G G R B B G G G G G G R G R B B G G) 13
+9     (G G G G G G G G G G G G R R G B R G B R B B B G G) 14
+10    (G B G R G G B G G R B B G G G G G G R G R B B G G) 12
+11    (G G G G G G G G G R R G G G G G G G R G R B B G G) 19
+12    (G B G R G G B G G R B B G G G G G G R G R B B G G) 13
+13    (G G G G B G G G G G B G G G G B G G G G B G R G G) 20
+14    (G B G R G G B G G R B B G G G G G G R G R B B G G) 13
+15    (G B G R G G B G G R B B G G G G G G R G R B B G G) 13
+16    (G G G G G G G G G R R G G G G G G G R G R B B G G) 19
+17    (B G G G G G G G G G R G G G G B G G G G B G R G G) 20
+18    (G B G R G G B G G R B B G G G G G G R G R B B G G) 13
+19    (G B G R G G B G G R B B G G G G G G R G R B B G G) 13
+20    (G B G R G G B G G R B B G G G G G G R G R B B G G) 13
+21    (G B G R G G B G G R B B G G G G G G R G R B B G G) 12
+22    (G G G G G G G G G R R G G G G G G G R G R B B G G) 18
+23    (G B G R G G B G G R B B G G G G G G R G R B B G G) 12
+24    (G B G G G G B G G R B B G G G G G G R G R B B G G) 12
+25    (G B G R G G B G G R B B G G G G G G R G R B B G G) 12
+26    (G B G G G G B G G R B B G G G G G G R G R B B G G) 13
+27    (G G G G B G G G G G B G G G G B G G G G B G R G G) 20
+28    (G G G G G G B G G R B B G G G G G G R G R B B G G) 14
+29    (G G G G G G G G G G G G R R G B R G B R B B B G G) 15
+30    (G G G G G G B G G R B B G G G G G G R G R B B G G) 14
+31    (G G G G G G G G G R R G G G G G G G R G R B B G G) 16
+32    (G B G R G G B G G R B B G G G G G G R G R B B G G) 11
+33    (G B G G G G B G G R B B G G G G G G R G R B B G G) 12
+34    (G G G G G G G G G R R G G G G G G G R G R B B G G) 15
+35    (G G G G G G G G G R R G G G G G G G R G R B B G G) 16
+36    (G B G R G G B G G R B B G G G G G G R G R B B G G) 11
+37    (G B G G G G B G G R B B G G G G G G R G R B B G G) 12
+38    (G G G G G G B G G R B B G G G G G G R G R B B G G) 13
+39    (R G G G G G G G G G B G G R R G G G R G R B B G G) 14
+40    (G B G G G G B G G R B B G G G G G G R G R B B G G) 13
+41    (G B G G G G B G G B B R R G G G G R B G R B G R G) 13
+42    (G B G R G G B G G R R G G G G G G G R G R B B G G) 14
+43    (G B G R G G B G G R B B G G G G G G R G R B B G G) 12
+44    (G G G G B G G G G G B G G G G B G G G G B G R G G) 19
+45    (G B G G G G B G G R R G G G G G G G R G R B B G G) 16
+46    (G B G R G G B G G B B B G G G G G G R G R B B G G) 12
+47    (G G G G G G B G G B B R R G G G G R B R R B R B R) 12
+48    (R G G G G G G G G G B B G G G G G G R G R B B G G) 15
+49    (G G G R G G B G G R B B G G G G G G R G R B B G G) 13
+50    (B G G G G G G G G G R G G G G G G G R G R B B G G) 18
+51    (B G G G G G G G G R B B G G G G G G R G R B B G G) 15
+52    (G B G R G G B G B B B B R G G G G G R G R B B G G) 12
+53    (G B G R G G B G G B B G G G G G G G R G R B B G G) 13
+54    (B G G G G R G G G R R G G G G G G G R G R B B G G) 15
+55    (G G G G G G B G G B B B G G G G G G R G R B B G G) 13
+56    (G B G R G G B G G B B B R G B G G G R G R B B G G) 11
+57    (G G G G G B G G G G R G R G B B B G R G B B G G R) 15
+58    (G G G G G G G G G G R G R G B G G R B G R B B R G) 16
+59    (G B G G G G B G G B B B R G B G G R B G R B B R B) 11
+60    (G B G G G G B G G B B B R G B G G R B G R B B R G) 12
+61    (G G G G G G G G G G B G G G G G G G R G R B B G G) 17
+62    (G G G G G G G G G G B G G G G G G G R G R B B G G) 17
+63    (G B G R G G B G G R B B G G G G G G R G R B B G G) 12
+64    (R G G G G G G G G G B G G G G G G G R G R B B G G) 16
+65    (G G G G B G G G G G B G G G G G G G R G R B B G G) 16
+66    (G G G G R G G G G G B G G G G G B G G B G B R R G) 18
+67    (G G G G G G G G G G R G G G B G G G R G R B B G G) 17
+68    (G B G R G G B G G B B B G G B G G R R G R B B R G) 12
+69    (G G G G G B G G G R B B G G G G G G R G R B B G G) 14
+70    (G G G G B G G G G G B G G B G G B G G B G G R G G) 18
+71    (G G G G B G G G G G B G G G G B G G G G B B G G R) 19
+72    (G B G G G G B G G R B B G G G G G G R G R B B G G) 13
+73    (G R G R G G B G G R B B G G G G G G R G R B B G G) 12
+74    (G B G B G G B G G B B B G G B G G R R G R B B R G) 12
+75    (G B G R G G B G G R B B G G G G G G R G R B B G G) 12
+76    (G B G R B G B G G B B B G G G G G G R G R B B G G) 11
+77    (G G B R G G B G G R R G G G G G G G R G R B B G G) 14
+78    (G B G G G G B G G R B B G G G G G G R G R B B G G) 13
+79    (G G G G G G G G G R R G G G G G G G R G R B B G G) 17
+80    (G G G G G G B G G R B B G G G G G G R G R B B G G) 14
+81    (G G G G G G G G G G R G G G B R G R R G R B B G G) 16
+82    (G B G G G G B G G R B B G G G G G G R G R B B G G) 13
+83    (G B G R G G B G G R B B G G G G G G R G R B B G G) 13
+84    (G G G R G G B G G R B B G G G G G G R G R B B G G) 14
+85    (B G G G G G G G G G R G G G G G G G R G R B B G G) 17
+86    (G G G G G B G G G G G G R G G G G G R G R B B G G) 17
+87    (G G G R G G B G G G R G R G B B B G R G B B G G R) 14
+88    (G G G G G G B G G R B B G G G G G G R G R B B G G) 16
+89    (G B G R B G B G G R B B G G G G G G R G R B B B G) 13
+90    (G G G G G G G G G G R G G G G G G G R G R B B G G) 19
+91    (G G G G G G G G R G B G G B G G B G G B G G R B R) 17
+92    (G B G R G G B G G R B B G G G G G G R G R B B G G) 14
+93    (G B G R G G G G G R R G G G G G G G R G R B B G G) 16
+94    (G G G G G G G G G R R G G G G G G G R G R B B G G) 19
+95    (G B G R G G B G G R B B G G G G G G R G R B B G G) 15
+96    (G G G G G G G G G G B G G G G G G G R G R B B G G) 20
+97    (G G G G G G R G G R R G G G G G G G R G R B B G G) 18
+98    (G B G G B G B G G G B G G G G B G G G G B G R G G) 18
+99    (G B G R G G B G G R B B G G G G G G R G R B B G G) 15
+100   (G G G G G G G G G G B G G B G G B G G B G B B G G) 19
+
+average fitness of population 75 = 14.86
+
+NIL

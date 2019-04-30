@@ -1,0 +1,198 @@
+;; Brandon Druschel
+;; 11/21/18
+;; RBG GA TASK 7: The Population Class Demo
+
+[1]> (load "rbg.l")
+;; Loading file rbg.l ...
+;; Loaded file rbg.l
+T
+[2]> ( setf p ( initial-population ) )
+#<POPULATION #x1A98E7F5>
+[3]> ( display p )
+
+
+Generation 0 population...
+
+1     (B R R B R R B R G R R G R B R B G B B R B B G B B) 11
+2     (B R G G B R B G B B G B G R R R B G G R R B B R R) 9
+3     (B G G R B B B B R B R B B B B B R B R G B R G R R) 13
+4     (B R R G B R R B B B B B B B B R R B R B R B G B B) 15
+5     (G B R B B R G B G B B R B B R R B B B G R R G B B) 13
+6     (B G R R G R G G G R G B B R B R B B G R R G B R R) 7
+7     (B B B R G G G G R R R R R G G B B B G R B G B G R) 8
+8     (G G B B G R R G G B G G G R R G G R B R R G G G B) 5
+9     (B R R R G B B B B R R G R B B B R R G G G B B R R) 10
+10    (G G R B G B R G B R R R R B G B G B G R R R B R B) 8
+11    (G R B G R R R G B R G B R R G G B B B G G B R B B) 9
+12    (R G R R B B R G G B G B B B B G B R B R G R B B G) 11
+13    (B R B G G G B R R B B R R G R G B R G B B B R G R) 9
+14    (G B G G B R G R R G G R B R R G R R B R R B R G B) 6
+15    (R G B B G G R G B B R B B R G G G B B R B R G R B) 10
+16    (B B G G G G R G R B R G R R R G B B B G G B G G G) 7
+17    (R R G G B B G B R R R B R R R B B G G G G G R B R) 7
+18    (B R R R R G R B G B R B R G R G B B G G G R G G B) 7
+19    (B G G R B B R B B B G R B R B B B R R R G G B G R) 11
+20    (B G B R R B B G G R G B G B B G R B B G B G R R B) 11
+21    (G G G R B R R R B R G R G B B B B B R B B R R B G) 10
+22    (B B B G B B B B G G B G B G B R B G R G B B B R G) 14
+23    (R G B G R R B B G G B G G G B B R B B G R R G B G) 9
+24    (G G R B R R B B R B G R R R R B B B R R B R R R G) 8
+25    (R R B B B G B B B B B R G R R G B R G R R G B B R) 11
+26    (G B R B G G B B B B R R R R B B G G G B G R R B B) 11
+27    (R G B G G B G G B R B G G G G R R R B B G G B R G) 7
+28    (B R B R B R R G G B B G B R B B G B R B B R B B R) 13
+29    (G B B G G G G G R G R R G B B R G R R G B G G G B) 6
+30    (R R B B R R G G G B G G B B G R B R B R G G G R G) 7
+31    (R R B B R B B R G R B B R G R G R G R R B G G B B) 9
+32    (B R B R G R B R B B G G R B B R G G R B B G G G G) 9
+33    (G G G R B R G R G R R R G R G B B R R B R B R B G) 6
+34    (R G B R B B R R B G R B G G B B R R G B G G G B R) 9
+35    (G G R R G R G R R G B B R R G G B B B B R R B B R) 8
+36    (G G B R G B G B G R R R G R G G G B B G B G G G G) 6
+37    (R G R G R R G R G B B B B R R G R B B G G B G R G) 7
+38    (R G R G B R B G B B B R R R R B R G R G R B G G G) 7
+39    (B B G R G B B G G R B G B G R G B B B G R R B R R) 10
+40    (B B R G R B B B R R R B B G R B B B B R B G R G B) 13
+41    (G R G R B G B B B G B R B B R R G G B R R B B B R) 11
+42    (R B G B G B G B B R R G R G G B R G B B G R B B B) 11
+43    (B B B R G G B R B G G R R R R G G G R R R G R R R) 5
+44    (R G R R B R B B B B G B R B B B B R G G B R G G B) 12
+45    (G B B B G G B R G B G G B B G B R B G R G R R R B) 10
+46    (R G R G B R G R R G G B B B G G R R G B R R G R R) 5
+47    (B R B R B G G B B B G R R R B G R B G G B G R G G) 9
+48    (R B B B B B B B R R R B G G G R G R G R R B G B B) 11
+49    (B B B R R G R B G G B R G G G B G R B B B G B G R) 10
+50    (R R B R R R G G B R R B G R R B G B G B B G G B R) 8
+51    (B R R B G G G R G G G G R B R R G B R B R B R R G) 6
+52    (R R R G R R R R B G G G B B G G G R G B B G B B R) 7
+53    (G G R G R B R B G R G R G R R B B R B R B B G B G) 8
+54    (B R B R B R R B G R G B B R R G G R B R G B B R R) 9
+55    (R B R G B G G G G G R R B R B R R G B G R R G R R) 5
+56    (R R G B G G B B R B R G R R G B B G G B G G G B R) 8
+57    (G G R G R R B R G B B R B G R B R G G G R B G G G) 6
+58    (R B R B B R G G R B R B B G G R B R R R B R B B R) 10
+59    (R R B G G R G B G R R B R R G G G R G G G R G R G) 3
+60    (G R B G R B B R B B R G R B R B B B B R R B G B G) 12
+61    (G R B R B R G B G G B G B R G G B R G R R R G G B) 7
+62    (B R B G R R R R R R B B G B B B G R G G B B G B R) 10
+63    (G R R G G G B G R R R B B G G G R R G R G G G R G) 3
+64    (G G B G B B G B R B G R G G G B B G B G R B G R G) 9
+65    (G G B G R B R B G B B G R B G B B G G B G G G B B) 11
+66    (B R G G G B R R G B G R R R B B R R R G B B B G R) 8
+67    (G G G B R G R B R B R B B R G B R G G B G B R R G) 8
+68    (B G B R G R R R R R B G B G G R R G R B R R G B G) 6
+69    (G R R R R B B G R R B R R G G G R B R B R B G B G) 7
+70    (B R R B G R G R G B B B B G B G R G B G B B G B G) 11
+71    (R R G G B G G G G G R G B B R R G B B R G R B R G) 6
+72    (R R G B G R R G R R G R G B B R B G R R B B B B R) 8
+73    (R G R G R G B B G R R R B G B B B R B R B G B R B) 10
+74    (R B B R G B G R G R G B R B G R R R R G G B G R R) 6
+75    (G B R G R G B R B B B G G B B G R R G G B B G B R) 10
+76    (B R B R R R R B R R G R B B G R R R B R R G G B G) 7
+77    (G R B G R B R R R R G R B R B G G G R G G G R B B) 6
+78    (R G R R B R B G B R G B B G B G R G R B R G G G B) 8
+79    (R B G R G G B B R G G R R R R B R B R R G G R G B) 6
+80    (R R G B R B R B R G R B B R R B G B G B B R G B B) 11
+81    (B G G B G R R R G B R G G B G B G B G R R B G G R) 7
+82    (B R R G R R G G G G R B B G G B R B R B G R B B R) 8
+83    (G B R B R B R B B B B R R R R G B G R B R B B G R) 11
+84    (G B B R R B B G B R B G G R B G G B G B B B G G B) 12
+85    (R B B G R B G G R B R G B B B G R G R G B B B G R) 10
+86    (B B R G B B B G G B R B R R B G R B B B B G G B B) 14
+87    (B G G R R G B R B R R B B B G R G B G R B R B R B) 10
+88    (G G B B G R R B R R G B G G R G R G B G B G R B B) 8
+89    (G R B G B G R G G G G G R G B G R B B R R R R B R) 6
+90    (B G G G R B R G B R G G B R G R R G R G R B G R R) 5
+91    (B G R B R B B R R R R B G G B G B R R G B G G G R) 8
+92    (B G R G G B R R B R G G R R R R R R G B G R B R R) 5
+93    (G R R G R R R B R B R R G G G G B R R B G R B G G) 5
+94    (B G R R R B B B R G B B R B B B R R B R G R R G R) 10
+95    (G G B B G R R R G B B G B B R B R R R R R R R R G) 7
+96    (B R G B R B B G B B G R B G G G R G B B G R R G G) 9
+97    (B G R B B G G B R B R B B B G G R B B G G G G B R) 11
+98    (B R G B G B B B B G B G G B B B R G G B B R B B B) 15
+99    (G R B R B G R G R G B R G B G R B B R B B B R R R) 9
+100   (B R B G B R R B G G G B G R R B B B G G R R B R R) 9
+
+NIL
+[4]> ( average p )
+8.7
+[7]> ( select-individual p)
+#<INDIVIDUAL #x1A964099>
+[8]> ( display (select-individual p) )
+41    (G R G R B G B B B G B R B B R R G G B R R B B B R) 11
+NIL
+[9]> ( display (select-individual p) )
+40    (B B R G R B B B R R R B B G R B B B B R B G R G B) 13
+NIL
+[10]> ( display (select-individual p) )
+22    (B B B G B B B B G G B G B G B R B G R G B B B R G) 14
+NIL
+[11]> (setf *select-demo* t)
+T
+[12]> ( display (select-individual p) )
+the sample of individuals ...
+3     (B G G R B B B B R B R B B B B B R B R G B R G R R) 13
+49    (B B B R R G R B G G B R G G G B G R B B B G B G R) 10
+72    (R R G B G R R G R R G R G B B R B G R R B B B B R) 8
+80    (R R G B R B R B R G R B B R R B G B G B B R G B B) 11
+48    (R B B B B B B B R R R B G G G R G R G R R B G B B) 11
+84    (G B B R R B B G B R B G G R B G G B G B B B G G B) 12
+68    (B G B R G R R R R R B G B G G R R G R B R R G B G) 6
+87    (B G G R R G B R B R R B B B G R G B G R B R B R B) 10
+
+the most fit of the sample ...
+3     (B G G R B B B B R B R B B B B B R B R G B R G R R) 13
+
+3     (B G G R B B B B R B R B B B B B R B R G B R G R R) 13
+NIL
+[13]> ( display (select-individual p) )
+the sample of individuals ...
+57    (G G R G R R B R G B B R B G R B R G G G R B G G G) 6
+69    (G R R R R B B G R R B R R G G G R B R B R B G B G) 7
+17    (R R G G B B G B R R R B R R R B B G G G G G R B R) 7
+37    (R G R G R R G R G B B B B R R G R B B G G B G R G) 7
+9     (B R R R G B B B B R R G R B B B R R G G G B B R R) 10
+46    (R G R G B R G R R G G B B B G G R R G B R R G R R) 5
+96    (B R G B R B B G B B G R B G G G R G B B G R R G G) 9
+47    (B R B R B G G B B B G R R R B G R B G G B G R G G) 9
+
+the most fit of the sample ...
+9     (B R R R G B B B B R R G R B B B R R G G G B B R R) 10
+
+9     (B R R R G B B B B R R G R B B B R R G G G B B R R) 10
+NIL
+[14]> ( display (select-individual p) )
+the sample of individuals ...
+27    (R G B G G B G G B R B G G G G R R R B B G G B R G) 7
+59    (R R B G G R G B G R R B R R G G G R G G G R G R G) 3
+66    (B R G G G B R R G B G R R R B B R R R G B B B G R) 8
+62    (B R B G R R R R R R B B G B B B G R G G B B G B R) 10
+94    (B G R R R B B B R G B B R B B B R R B R G R R G R) 10
+31    (R R B B R B B R G R B B R G R G R G R R B G G B B) 9
+56    (R R G B G G B B R B R G R R G B B G G B G G G B R) 8
+4     (B R R G B R R B B B B B B B B R R B R B R B G B B) 15
+
+the most fit of the sample ...
+4     (B R R G B R R B B B B B B B B R R B R B R B G B B) 15
+
+4     (B R R G B R R B B B B B B B B R R B R B R B G B B) 15
+NIL
+[15]> ( display (select-individual p) )
+the sample of individuals ...
+61    (G R B R B R G B G G B G B R G G B R G R R R G G B) 7
+83    (G B R B R B R B B B B R R R R G B G R B R B B G R) 11
+94    (B G R R R B B B R G B B R B B B R R B R G R R G R) 10
+20    (B G B R R B B G G R G B G B B G R B B G B G R R B) 11
+91    (B G R B R B B R R R R B G G B G B R R G B G G G R) 8
+38    (R G R G B R B G B B B R R R R B R G R G R B G G G) 7
+44    (R G R R B R B B B B G B R B B B B R G G B R G G B) 12
+66    (B R G G G B R R G B G R R R B B R R R G B B B G R) 8
+
+the most fit of the sample ...
+44    (R G R R B R B B B B G B R B B B B R G G B R G G B) 12
+
+44    (R G R R B R B B B B G B R B B B B R G G B R G G B) 12
+NIL
+[16]> (bye)
+Bye.

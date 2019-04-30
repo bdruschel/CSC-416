@@ -1,0 +1,19 @@
+;;;; TASK 6: THREE QUARTERS / FAR CORNERS (DEMO)
+
+[1]> (cd "C:\\Users\\Brandon\\Desktop")
+#P"C:\\Users\\Brandon\\Desktop\\"
+[2]> (load "three_quarters_far_corners_solution.l")
+;; Loading file three_quarters_far_corners_solution.l ...
+;; Loaded file three_quarters_far_corners_solution.l
+T
+[3]> coin-diameter
+0.955
+[4]> ;; rect-width = coin-diameter
+rect-width
+0.955
+[5]> ;; rect-length = coin-diameter * 3
+rect-length
+2.865
+[6]> ;; rect-diagonal = sqrt(rect-width^2 + rect-length^2)
+rect-diagonal
+3.0199752

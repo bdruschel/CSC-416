@@ -1,0 +1,189 @@
+;;;; TASK I: singleton-p -- rac -- rdc -- snoc -- palindrome-p (DEMO)
+
+  i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.49 (2010-07-07) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2010
+
+Type :h and hit Enter for context help.
+
+[1]> ( load "lp.l")
+;; Loading file lp.l ...
+;; Loaded file lp.l
+T
+[2]> ( singleton-p (list 1 ))
+T
+[3]> ( singleton-p ( list 1 2 ))
+NIL
+[4]> ( singleton-p ( list 1 2 3 4 5 6 7 ))
+NIL
+[5]> ( trace rdc )
+;; Tracing function RDC.
+(RDC)
+[6]> ( rdc (list 1))
+1. Trace: (RDC '(1))
+1. Trace: RDC ==> NIL
+NIL
+[7]> ( rdc '( 1 2 3 4 ) )
+1. Trace: (RDC '(1 2 3 4))
+2. Trace: (RDC '(2 3 4))
+3. Trace: (RDC '(3 4))
+4. Trace: (RDC '(4))
+4. Trace: RDC ==> NIL
+3. Trace: RDC ==> (3)
+2. Trace: RDC ==> (2 3)
+1. Trace: RDC ==> (1 2 3)
+(1 2 3)
+[8]> ( trace rac )
+;; Tracing function RAC.
+(RAC)
+
+;; The following command resulted in an error. The code was corrected and reloaded.
+[9]> ( rac '( 1 ) )
+1. Trace: (RAC '(1))
+*** - COND: variable SINGLETON-P has no value
+The following restarts are available:
+USE-VALUE      :R1      Input a value to be used instead of SINGLETON-P.
+STORE-VALUE    :R2      Input a new value for SINGLETON-P.
+ABORT          :R3      Abort main loop
+Break 1 [10]> :a
+[11]> ( load "lp.l")
+;; Loading file lp.l ...
+WARNING: DEFUN/DEFMACRO: redefining RAC; it was traced!
+WARNING: DEFUN/DEFMACRO: redefining RDC; it was traced!
+;; Loaded file lp.l
+T
+
+
+[12]> ( rac '( 1 ) )
+1
+[13]> ( trace rac )
+;; Tracing function RAC.
+(RAC)
+[14]> ( rac '( 1 ) )
+1. Trace: (RAC '(1))
+1. Trace: RAC ==> 1
+1
+[15]> ( rac '( 1 2 3 4 ) )
+1. Trace: (RAC '(1 2 3 4))
+2. Trace: (RAC '(2 3 4))
+3. Trace: (RAC '(3 4))
+4. Trace: (RAC '(4))
+4. Trace: RAC ==> 4
+3. Trace: RAC ==> 4
+2. Trace: RAC ==> 4
+1. Trace: RAC ==> 4
+4
+[16]> ( untrace rac )
+(RAC)
+[17]> ( untrace rdc )
+NIL
+[18]> ( trace snoc )
+;; Tracing function SNOC.
+(SNOC)
+[19]> ( snoc 'blue '() )
+1. Trace: (SNOC 'BLUE 'NIL)
+1. Trace: SNOC ==> (BLUE)
+(BLUE)
+[20]> ( snoc 'blue '(RED) )
+1. Trace: (SNOC 'BLUE '(RED))
+2. Trace: (SNOC 'BLUE 'NIL)
+2. Trace: SNOC ==> (BLUE)
+1. Trace: SNOC ==> (RED BLUE)
+(RED BLUE)
+[21]> ( snoc 'blue '(cyan cobalt turquoise teal) )
+1. Trace: (SNOC 'BLUE '(CYAN COBALT TURQUOISE TEAL))
+2. Trace: (SNOC 'BLUE '(COBALT TURQUOISE TEAL))
+3. Trace: (SNOC 'BLUE '(TURQUOISE TEAL))
+4. Trace: (SNOC 'BLUE '(TEAL))
+5. Trace: (SNOC 'BLUE 'NIL)
+5. Trace: SNOC ==> (BLUE)
+4. Trace: SNOC ==> (TEAL BLUE)
+3. Trace: SNOC ==> (TURQUOISE TEAL BLUE)
+2. Trace: SNOC ==> (COBALT TURQUOISE TEAL BLUE)
+1. Trace: SNOC ==> (CYAN COBALT TURQUOISE TEAL BLUE)
+(CYAN COBALT TURQUOISE TEAL BLUE)
+[22]> ( trace palindrome-p )
+;; Tracing function PALINDROME-P.
+(PALINDROME-P)
+[23]> ( palindrome-p '( ) )
+1. Trace: (PALINDROME-P 'NIL)
+1. Trace: PALINDROME-P ==> T
+T
+
+;; The following command resulted in an error. The code was corrected and reloaded.
+
+[24]> ( palindrome-p '( palindrome ) )
+1. Trace: (PALINDROME-P '(PALINDROME))
+*** - COND: variable LIST has no value
+The following restarts are available:
+USE-VALUE      :R1      Input a value to be used instead of LIST.
+STORE-VALUE    :R2      Input a new value for LIST.
+ABORT          :R3      Abort main loop
+Break 1 [25]> :a
+[26]> ( load "lp.l" )
+;; Loading file lp.l ...
+WARNING: DEFUN/DEFMACRO: redefining SNOC; it was traced!
+WARNING: DEFUN/DEFMACRO: redefining PALINDROME-P; it was traced!
+;; Loaded file lp.l
+T
+
+
+[27]> ( trace palindrome-p )
+;; Tracing function PALINDROME-P.
+(PALINDROME-P)
+[28]> ( palindrome-p '( ) )
+1. Trace: (PALINDROME-P 'NIL)
+1. Trace: PALINDROME-P ==> T
+T
+[29]> ( palindrome-p '( palindrome ) )
+1. Trace: (PALINDROME-P '(PALINDROME))
+1. Trace: PALINDROME-P ==> T
+T
+[30]> ( palindrome-p '( CLOS SLOC ) )
+1. Trace: (PALINDROME-P '(CLOS SLOC))
+1. Trace: PALINDROME-P ==> NIL
+NIL
+[31]> ( palindrome-p '( FOOD DRINK FOOD ) )
+1. Trace: (PALINDROME-P '(FOOD DRINK FOOD))
+2. Trace: (PALINDROME-P '(DRINK))
+2. Trace: PALINDROME-P ==> T
+1. Trace: PALINDROME-P ==> T
+T
+[32]> ( palindrome-p '( 1 2 3 4 5 4 3 2 1 ) )
+1. Trace: (PALINDROME-P '(1 2 3 4 5 4 3 2 1))
+2. Trace: (PALINDROME-P '(2 3 4 5 4 3 2))
+3. Trace: (PALINDROME-P '(3 4 5 4 3))
+4. Trace: (PALINDROME-P '(4 5 4))
+5. Trace: (PALINDROME-P '(5))
+5. Trace: PALINDROME-P ==> T
+4. Trace: PALINDROME-P ==> T
+3. Trace: PALINDROME-P ==> T
+2. Trace: PALINDROME-P ==> T
+1. Trace: PALINDROME-P ==> T
+T
+[33]> ( palindrome-p '( HEY HEY MY MY MY MY HEY HEY ) )
+1. Trace: (PALINDROME-P '(HEY HEY MY MY MY MY HEY HEY))
+2. Trace: (PALINDROME-P '(HEY MY MY MY MY HEY))
+3. Trace: (PALINDROME-P '(MY MY MY MY))
+4. Trace: (PALINDROME-P '(MY MY))
+5. Trace: (PALINDROME-P 'NIL)
+5. Trace: PALINDROME-P ==> T
+4. Trace: PALINDROME-P ==> T
+3. Trace: PALINDROME-P ==> T
+2. Trace: PALINDROME-P ==> T
+1. Trace: PALINDROME-P ==> T
+T
+[34]> (bye)
+Bye.

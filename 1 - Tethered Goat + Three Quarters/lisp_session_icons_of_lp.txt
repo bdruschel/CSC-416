@@ -1,0 +1,51 @@
+;;;; CLISP SESSION 3: CAR, CDR AND CONS
+
+[1]> (car '(blue yellow red))
+BLUE
+[2]> (cdr ('blue yellow red))
+
+*** - EVAL: 'BLUE is not a function name; try using a symbol instead
+The following restarts are available:
+USE-VALUE      :R1      Input a value to be used instead.
+ABORT          :R2      Abort main loop
+Break 1 [3]> :a
+[4]> (cdr '(blue yellow red))
+(YELLOW RED)
+[5]> (car '((1 2) buckle my shoe))
+(1 2)
+[6]> cdr '((1 2) buckle my shoe))
+
+*** - SYSTEM::READ-EVAL-PRINT: variable CDR has no value
+The following restarts are available:
+USE-VALUE      :R1      Input a value to be used instead of CDR.
+STORE-VALUE    :R2      Input a new value for CDR.
+ABORT          :R3      Abort main loop
+Break 1 [7]> :a
+[8]> (cdr '((1 2) buckle my shoe))
+(BUCKLE MY SHOE)
+[9]> (car '("sunshine"))
+"sunshine"
+[10]> (cdr '("sunshine"))
+NIL
+[11]> (cons 'espresso '(latte cappuccino))
+(ESPRESSO LATTE CAPPUCCINO)
+[12]> (cons '(a b c) '(1 2 3))
+((A B C) 1 2 3)
+[13]> (cons 'sunshine ())
+(SUNSHINE)
+[14]> (setf l '(red blue yellow purple orange))
+(RED BLUE YELLOW PURPLE ORANGE)
+[15]> (car (cdr (cdr (cdr l ))))
+PURPLE
+[16]> (cadddr l)
+PURPLE
+[17]> (nth 3 l)
+PURPLE
+[18]> (setf a 'dinosaur)
+DINOSAUR
+[19]> (setf b 'hockey)
+HOCKEY
+[20]> (setf c 'cheese)
+CHEESE
+[21]> (cons a (cons b (cons c () )))
+(DINOSAUR HOCKEY CHEESE)

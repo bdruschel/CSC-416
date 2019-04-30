@@ -1,0 +1,248 @@
+;; Brandon Druschel
+;; 12/13/18
+;; TSP GA: Genetic Algorithm Demo
+
+[22]> (ga-demo)
+OPTIMAL ROUTE FROM CITY A TO CITY E (lower fitness is better)
+
+
+
+Generation 0 population...
+
+1     (H J G A D F E B C K I) 525
+2     (K G C I A D E B H F J) 213
+3     (D F I A J E B K G C H) 1498
+4     (G J A I B E K F C D H) 1719
+5     (G A I B D C K J E F H) 3825
+6     (A C K J I G B H F E D) 3986
+7     (J C D I B F A G E H K) 1091
+8     (D B J G H A I E K F C) 1296
+9     (A G D F K I H B C J E) 4464
+10    (I A H B K E F J G C D) 2261
+11    (K G D H C I A E B F J) 416
+12    (H K J I F A G D B C E) 2809
+13    (K A D F G C J I B H E) 3465
+14    (C H I D B K J F A G E) 1091
+15    (A B K D H F J I G C E) 6478
+16    (B J A C I E G K H D F) 1517
+17    (K J C A B G F I E H D) 2924
+18    (K A B I J F C D E H G) 3824
+19    (K C F G D A B E J H I) 1071
+20    (D B G H C A F E I J K) 339
+21    (K A G B C D H I F E J) 2627
+22    (B C J H K G F I A E D) 416
+23    (D K H G C A I J B F E) 2227
+24    (I H K D C F G A E B J) 416
+25    (K D J C I H G F A B E) 1071
+26    (A I C F H J K G E B D) 4754
+27    (F H A E C J G D I B K) 416
+28    (F C B A K G D E I H J) 1839
+29    (I H C F A D J E B G K) 795
+30    (D K I F C A B E J H G) 1071
+31    (I D H K A C E G J B F) 1141
+32    (A D K E B I J C H G F) 1562
+33    (B G J H C K I F A E D) 416
+34    (B K D F I H A C E G J) 1141
+35    (F C H J B A D G E K I) 1878
+36    (C D B G A K J H F I E) 1828
+37    (J B H K C G D A I F E) 1256
+38    (F A K J B H E C G I D) 3126
+39    (K C A G F E I H B J D) 969
+40    (J K C H A I E D F B G) 1296
+41    (K D B A H I J E C G F) 1680
+42    (B A E F K C J G H I D) 416
+43    (B I C F A D K E H J G) 1562
+44    (A I B F H E J D G C K) 2158
+45    (D A E H B K G J C I F) 416
+46    (D F J I A K H C E G B) 2243
+47    (A I J D B C E H K F G) 2796
+48    (D G H A K E C F I B J) 902
+49    (D K F A H I B C J E G) 2264
+50    (K A C G D E J B I F H) 1494
+51    (F A D C K J I H G E B) 3790
+52    (K F G A I D E J B C H) 1731
+53    (B H J G A F I E C D K) 737
+54    (G D K I C A H F E J B) 316
+55    (G I D J A H F E K B C) 316
+56    (A F H C K I G B D J E) 3974
+57    (J G H K D C I A F E B) 339
+58    (H I J C A B G F D K E) 3901
+59    (K J G I H F A D B E C) 977
+60    (I H B K D J G A C F E) 1247
+61    (H D G C I A J K E B F) 1889
+62    (F J D A I C G K H B E) 4248
+63    (A C J K I B D F H E G) 3244
+64    (B H F A I D K C E J G) 3840
+65    (I B C K J G D F H A E) 416
+66    (I A H K D C E B J G F) 2688
+67    (C I A F E D J H K G B) 339
+68    (B J F A E G C H D K I) 416
+69    (J F D K C B G I A H E) 413
+70    (J A H B G I F C E D K) 4475
+71    (K B C J I G H F A D E) 213
+72    (A J I K F C G E H D B) 4002
+73    (A J K E G B H F C D I) 1889
+74    (G K I D C B H J A E F) 416
+75    (B A D K G C H F J I E) 3752
+76    (J H C I D G F A B K E) 2406
+77    (J A K D C E G I B F H) 2448
+78    (H A C B D E J I F G K) 948
+79    (C A K E I F B J D H G) 902
+80    (B K G H C A E D I J F) 416
+81    (B K H D A G F J E C I) 2291
+82    (H B I K G J F C D A E) 416
+83    (K I H J G A E F C D B) 416
+84    (G B D I H A J E K C F) 1498
+85    (C K B A H I J E F D G) 1680
+86    (H I A C K D E B F G J) 1436
+87    (D H F A K C J I E B G) 1408
+88    (A G I C B H E D F K J) 3207
+89    (F C D J I A H E G B K) 413
+90    (I A G F E H J D B C K) 969
+91    (G I A H C J E F D K B) 838
+92    (C D K J A G E B I H F) 1091
+93    (J D A G H B C E K I F) 2865
+94    (A K I J F H C E G D B) 3115
+95    (A D B H E G J F K I C) 2086
+96    (A D F E G H C B K I J) 525
+97    (G B A I C D E H J K F) 1949
+98    (J B A F H I G E C K D) 2740
+99    (A J C H I F D G E K B) 4012
+100   (J H I B D G K A F C E) 1973
+
+average fitness of population 0 = 1826.04
+
+average fitness of population 1 = 666.48
+average fitness of population 2 = 1363.26
+average fitness of population 3 = 2157.92
+average fitness of population 4 = 773.83
+average fitness of population 5 = 1217.69
+average fitness of population 6 = 1536.99
+average fitness of population 7 = 1559.78
+average fitness of population 8 = 936.33
+average fitness of population 9 = 1082.44
+average fitness of population 10 = 1073.81
+average fitness of population 11 = 699.8
+average fitness of population 12 = 1036.32
+average fitness of population 13 = 1049.56
+average fitness of population 14 = 1031.45
+average fitness of population 15 = 1060.11
+average fitness of population 16 = 1765.17
+average fitness of population 17 = 1095.31
+average fitness of population 18 = 1269.74
+average fitness of population 19 = 2930.71
+average fitness of population 20 = 2240.95
+average fitness of population 21 = 992.08
+average fitness of population 22 = 1339.89
+average fitness of population 23 = 1348.78
+average fitness of population 24 = 833.21
+average fitness of population 25 = 738.5
+
+
+
+Generation 25 population...
+
+1     (H G K I J D C A F B E) 279
+2     (H G D I J C K B F A E) 279
+3     (G K J H D C I A F B E) 279
+4     (G D F H I K J A C B E) 304
+5     (H K G I D J C A F B E) 279
+6     (H G K I J D C A F B E) 279
+7     (H G K D I B C A F J E) 279
+8     (K B G I D J C H F A E) 279
+9     (H G K I J D C A F B E) 279
+10    (G K J H I F D A C B E) 304
+11    (H G K D I J C A F B E) 279
+12    (K B G I D J C H F A E) 1499
+13    (I A D C H J G K F B E) 1884
+14    (G K J H D F C I A B E) 1719
+15    (H K G I J D C A F B E) 279
+16    (F D C K H J I A G B E) 279
+17    (G K J H I D C A F B E) 279
+18    (D K C I H J G A F B E) 279
+19    (H K G I J D C A F B E) 279
+20    (H G K D I B C A F J E) 1661
+21    (G K J H I F D A C B E) 304
+22    (H G K D C I A J F B E) 1922
+23    (K B G I D J C H F A E) 1095
+24    (K B G I D J C H F A E) 672
+25    (H G K D I J C A F B E) 279
+26    (H G K D B C I A F J E) 279
+27    (K B G I D J C H F A E) 672
+28    (K B G I D J C H F A E) 416
+29    (K B G I D J C H F A E) 416
+30    (H G J I K C D A F B E) 279
+31    (G K C D H J I A F B E) 279
+32    (G K J H D F C I A B E) 1071
+33    (J B K I D H C A F G E) 1499
+34    (G K J C I D H A F B E) 279
+35    (H G K D B C I A F J E) 279
+36    (H G K D B C I A F J E) 1661
+37    (J K G I D H C A F B E) 279
+38    (G D F H I K J A C B E) 304
+39    (G K J C I D H A F B E) 279
+40    (H G K I J C D A F B E) 279
+41    (H G D I J C K A F E B) 339
+42    (G D K C I H J A F B E) 279
+43    (G K J I C H D A F B E) 279
+44    (G K I C J D H A F B E) 279
+45    (H G J I K D C A F B E) 279
+46    (G D C K H J I A F B E) 279
+47    (G D F H I K J A C B E) 304
+48    (G B I D J C H A F K E) 1095
+49    (H C K G B D A F J I E) 1682
+50    (G K H D I J C A F B E) 279
+51    (J B K I D H C A F G E) 1499
+52    (H J G K I D C A F B E) 279
+53    (G K J C I D H A F B E) 279
+54    (G K C H D J I A F B E) 279
+55    (G K J H I B C D A F E) 339
+56    (I G K H J F D A C B E) 304
+57    (G K J H D C I A F B E) 279
+58    (H K G I J D C A F E B) 339
+59    (G D C F H J I A K B E) 1553
+60    (J B K I D C H A F G E) 1499
+61    (J G K I D H C A F B E) 279
+62    (H G D I J C K B F A E) 416
+63    (G F J C I D H A K B E) 1553
+64    (G K I D J C H A F B E) 279
+65    (G K J H I B D A C F E) 1247
+66    (I K G J D C H A F B E) 279
+67    (D K C I H J G A F B E) 279
+68    (G D K B I H J A F C E) 1973
+69    (G K J A I D C H F B E) 2177
+70    (G D C K H J I A F B E) 279
+71    (H G K I J D C A F B E) 279
+72    (J B K C I D H A F E G) 339
+73    (H G K I C D A F B J E) 1687
+74    (K B G C D H J I F A E) 416
+75    (K B G H D C J I F A E) 416
+76    (H G K D I B C A F J E) 1661
+77    (G D F H I K J C A B E) 1071
+78    (H G D K I J C B F A E) 416
+79    (G K D I J C H A F B E) 279
+80    (G D C K H J I A B F E) 1177
+81    (G K I J C D H A F B E) 279
+82    (G D C K H J I A F B E) 279
+83    (K B G I J C D H F A E) 416
+84    (D K C I F J G A H B E) 926
+85    (K B G I J D C H F A E) 416
+86    (F D C K H J I A G B E) 1220
+87    (H G K I D C F A B J E) 2479
+88    (K G H I D C A F B J E) 1687
+89    (H G K D I C A F B J E) 1687
+90    (G K J H I C D A F B E) 279
+91    (H G K D B C I A F J E) 1661
+92    (H K D J C I G A F B E) 279
+93    (I A D C H J G K F B E) 1884
+94    (F J C K D H I A G B E) 1220
+95    (H G K D B C I A F J E) 1661
+96    (H G K I J D C B F A E) 416
+97    (J B K I D H C A F G E) 1499
+98    (G K I J D C H A F B E) 279
+99    (G K J H D B C F A I E) 1296
+100   (H G K D C I A J F B E) 1922
+
+average fitness of population 25 = 738.5
+
+NIL

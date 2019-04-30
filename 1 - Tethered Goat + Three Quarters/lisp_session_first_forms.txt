@@ -1,0 +1,79 @@
+;;;; LISP SESSION 1: FIRST FORMS
+
+[1]> "Common Lisp Object System"
+"Common Lisp Object System"
+[2]> 55555555555555555555555555
+55555555555555555555555555
+[3]> pi
+3.1415926535897932385L0
+[4]> pie
+
+*** - SYSTEM::READ-EVAL-PRINT: variable PIE has no value
+The following restarts are available:
+USE-VALUE      :R1      Input a value to be used instead of PIE.
+STORE-VALUE    :R2      Input a new value for PIE.
+ABORT          :R3      Abort main loop
+Break 1 [5]> :a
+[6]> (+ 2 3 5 7)
+17
+[7]> (* (3 6 9) (- 8 5))
+
+*** - EVAL: 3 is not a function name; try using a symbol instead
+The following restarts are available:
+USE-VALUE      :R1      Input a value to be used instead.
+ABORT          :R2      Abort main loop
+Break 1 [8]> :a
+[9]> (+ (* 3 6 9) (-8 5))
+
+*** - EVAL: -8 is not a function name; try using a symbol instead
+The following restarts are available:
+USE-VALUE      :R1      Input a value to be used instead.
+ABORT          :R2      Abort main loop
+Break 1 [10]> (+ (* 3 6 9) (- 8 5))
+165
+Break 1 [10]> :A
+[11]> (double 5)
+
+*** - EVAL: undefined function DOUBLE
+The following restarts are available:
+USE-VALUE      :R1      Input a value to be used instead of (FDEFINITION 'DOUBLE).
+RETRY          :R2      Retry
+STORE-VALUE    :R3      Input a new value for (FDEFINITION 'DOUBLE).
+ABORT          :R4      Abort main loop
+Break 1 [12]> :a
+[13]> (quote pie)
+PIE
+[14]> (quote (double 5))
+(DOUBLE 5)
+[15]> (quote (+ 1 2))
+(+ 1 2)
+[16]> (quote whatever)
+WHATEVER
+[17]> 'pie
+PIE
+[19]> '(double 5)
+(DOUBLE 5)
+[20]> (setf pie 'cherry)
+CHERRY
+[21]> pie
+CHERRY
+[22]> (setf dozen 12)
+12
+[24]> dozen
+12
+[25]> (defun double (x) (* x 2))
+DOUBLE
+[26]> (double 5)
+10
+[27]> (double dozen)
+24
+[28]>
+(double pie)
+
+*** - *: CHERRY is not a number
+The following restarts are available:
+USE-VALUE      :R1      Input a value to be used instead.
+ABORT          :R2      Abort main loop
+Break 1 [29]> :a
+[30]> (double (double dozen))
+48

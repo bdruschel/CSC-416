@@ -1,0 +1,110 @@
+;;;; LISP SESSION 5: SIMPLE THINGS
+
+;;;; DISTANCE
+[1]> (setf x1 2)
+2
+[2]> (setf y1 3)
+3
+[3]> (setf x2 7)
+7
+[4]> (setf y2 1)
+1
+[11]> (setf change-in-x (expt (- x2 x1) 2))
+25
+[12]> (setf change-in-y (expt (- y2 y1) 2))
+4
+[13]> (setf distance-between-two-points (sqrt (+ change-in-x change-in-y)))
+5.3851647
+
+;;;; REFERENCING X
+[53]> (setf list-a '(a b x c d))
+(A B X C D)
+[54]> (setf list-b '(a b (x) c d))
+(A B (X) C D)
+[55]> (setf list-c '(a (b x c d)))
+(A (B X C D))
+[56]> (caddr list-a)
+X
+[57]> (caddr list-b)
+(X)
+[58]> (caaddr list-b)
+X
+[59]> (caddr list-c)
+NIL
+[60]> (cadr list-c)
+(B X C D)
+[61]> (caadr list-c)
+B
+[62]> (caaddr list-c)
+NIL
+[63]> (cdaddr list-c)
+NIL
+[64]> (cdr list-c)
+((B X C D))
+[65]> (cadr list-c)
+(B X C D)
+[66]> (cdadr list-c)
+(X C D)
+[67]> (cadadr list-c)
+X
+
+;;;; META-FORMS
+[15]> (setf colors '(red orange yellow green blue indigo violet))
+(RED ORANGE YELLOW GREEN BLUE INDIGO VIOLET)
+[16]> (quote colors)
+COLORS
+[17]> 'colors
+COLORS
+[18]> colors
+(RED ORANGE YELLOW GREEN BLUE INDIGO VIOLET)
+[19]> (describe 'colors)
+
+COLORS is the symbol COLORS, lies in #<PACKAGE COMMON-LISP-USER>, is accessible in 1 package COMMON-LISP-USER, a
+variable, value: (RED ORANGE YELLOW GREEN BLUE INDIGO VIOLET).
+
+ #<PACKAGE COMMON-LISP-USER> is the package named COMMON-LISP-USER. It has 2 nicknames CL-USER, USER.
+ It imports the external symbols of 2 packages COMMON-LISP, EXT and exports no symbols, but no package uses these
+ exports.
+
+ (RED ORANGE YELLOW GREEN BLUE INDIGO VIOLET) is a list of length 7.
+
+[20]> (describe colors)
+
+(RED ORANGE YELLOW GREEN BLUE INDIGO VIOLET) is a list of length 7.
+
+[21]> (type-of 'colors)
+SYMBOL
+[22]> (type-of colors)
+CONS
+[23]> (typep colors 'cons)
+T
+[24]> (typep colors 'list)
+T
+[25]> (typep colors 'symbol)
+NIL
+[26]> (typep 'colors 'cons)
+NIL
+[27]> (typep 'colors 'symbol)
+T
+
+;;;; B5 DECK
+28]> (setf clubs '( (10 c) (j c) (q c) (k c) (a c)))
+((10 C) (J C) (Q C) (K C) (A C))
+[33]> (setf diamonds '((10 d) (j d) (q d) (k d) (a d)))
+((10 D) (J D) (Q D) (K D) (A D))
+[36]> (setf hearts '((10 h) (j h) (q h) (k h) (a h)))
+((10 H) (J H) (Q H) (K H) (A H))
+[37]> (setf spades '((10 s) (j s) (q s) (k s) (a s)))
+((10 S) (J S) (Q S) (K S) (A S))
+[47]> (setf deck (append clubs diamonds hearts spades))
+((10 C) (J C) (Q C) (K C) (A C) (10 D) (J D) (Q D) (K D) (A D) (10 H) (J H) (Q H) (K H) (A H) (10 S) (J S) (Q S) (K S)
+ (A S))
+[48]> deck
+((10 C) (J C) (Q C) (K C) (A C) (10 D) (J D) (Q D) (K D) (A D) (10 H) (J H) (Q H) (K H) (A H) (10 S) (J S) (Q S) (K S)
+ (A S))
+[49]> (setf partitioned-deck (list clubs diamonds hearts spades))
+(((10 C) (J C) (Q C) (K C) (A C)) ((10 D) (J D) (Q D) (K D) (A D)) ((10 H) (J H) (Q H) (K H) (A H))
+ ((10 S) (J S) (Q S) (K S) (A S)))
+[50]> partitioned-deck
+(((10 C) (J C) (Q C) (K C) (A C)) ((10 D) (J D) (Q D) (K D) (A D)) ((10 H) (J H) (Q H) (K H) (A H))
+ ((10 S) (J S) (Q S) (K S) (A S)))

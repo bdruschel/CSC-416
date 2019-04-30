@@ -1,0 +1,59 @@
+;;;; LISP SESSION 4: REFERENCERS AND CONSTRUCTORS
+
+[1]>(setf oo-languages '(simula smalltalk java clos))
+(SIMULA SMALLTALK JAVA CLOS)
+[2]> oo-languages
+(SIMULA SMALLTALK JAVA CLOS)
+[3]> 'oo-languages
+OO-LANGUAGES
+[4]> (quote oo-languages)
+OO-LANGUAGES
+[5]> (car oo-languages)
+SIMULA
+[6]> (cdr oo-languages)
+(SMALLTALK JAVA CLOS)
+[7]> (car (cdr oo-languages) )
+SMALLTALK
+[8]> (cadr oo-languages)
+SMALLTALK
+[9]> (second oo-languages)
+SMALLTALK
+[10]> (first oo-languages)
+SIMULA
+[11]> (third oo-languages)
+JAVA
+[12]> (nth 2 oo-languages)
+JAVA
+[13]> (nth 1 oo-languages)
+SMALLTALK
+[14]> (setf numbers '(1 2 3) )
+(1 2 3)
+[15]> (setf letters '(a b c) )
+(A B C)
+[16]> (cons numbers letters)
+((1 2 3) A B C)
+[17]> (list numbers letters)
+((1 2 3) (A B C))
+[18]> (append numbers letters)
+(1 2 3 A B C)
+[19]> (list numbers (cdr numbers) (cddr numbers) )
+((1 2 3) (2 3) (3))
+[20]> (append numbers (cdr numbers) (cddr numbers) )
+(1 2 3 2 3 3)
+[21]> (setf animals '(ant bat cat dog eel) )
+(ANT BAT CAT DOG EEL)
+[22]> (car (cdr (cdr (cdr animals) ) ) )
+DOG
+[23]> (nth 3 animals)
+DOG
+[24]> (setf a 'apple b 'peach c 'cherry)
+CHERRY
+[25]> (cons a (cons b (cons c () ) ) )
+(APPLE PEACH CHERRY)
+[26]> (list a b c)
+(APPLE PEACH CHERRY)
+[27]> (setf x '(red blue) y '(green yellow) )
+(GREEN YELLOW)
+[28]> (append x y y x)
+(RED BLUE GREEN YELLOW GREEN YELLOW RED BLUE)
+[29]>

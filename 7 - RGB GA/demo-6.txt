@@ -1,0 +1,57 @@
+;; Brandon Druschel
+;; 11/17/18
+;; RBG GA TASK 6: The Individual Class Demo
+
+[7]> (load "rbg.l")
+;; Loading file rbg.l ...
+;; Loaded file rbg.l
+T
+[8]> ( setf rbg (rbg-string) )
+(B R R R G B R R B B B B G B R R G G G B R R R G B)
+[9]> rbg
+(B R R R G B R R B B B B G B R R G G G B R R R G B)
+[10]> ( setf *fitness* #'fitness-b )
+#<STANDARD-GENERIC-FUNCTION FITNESS-B>
+[13]> ( setf rbg-i (new-individual 1 rbg) )
+#<INDIVIDUAL #x1A9EC025>
+[14]> (individual-number rbg-i)
+1
+[15]> (individual-rbg-string rbg-i)
+(B R R R G B R R B B B B G B R R G G G B R R R G B)
+[16]> (display rbg-i)
+1     (B R R R G B R R B B B B G B R R G G G B R R R G B) 9
+NIL
+[17]> (funcall *fitness* rbg)
+9
+[26]> (setf r (random-individual) )
+#<INDIVIDUAL #x1AA353D5>
+[27]> (display r)
+0     (B G R R G R G G G R G B B R B R B B G R R G B R R) 7
+NIL
+[28]> (setf r (random-individual) )
+#<INDIVIDUAL #x1A9FFEA5>
+[29]> (display r)
+0     (B B B R G G G G R R R R R G G B B B G R B G B G R) 8
+NIL
+[30]> (bye)
+Bye.
+
+; ---------------------------------------------------
+; Encapsulated Demo
+
+[1]> (load "rbg.l")
+;; Loading file rbg.l ...
+;; Loaded file rbg.l
+T
+[2]> (individual-demo)
+0     (R B R R B R B R B B B B R R B R R B R G R R G R B) 13
+1     (R B G B B R B B G B B B R G G B R B G B B G B G R) 5
+2     (R R B G G R R B B R R B G G R B B B B R B R B B B) 9
+3     (B B R B R G B R G R R B R R G B R R B B B B B B B) 9
+Fitness of i0 = 13
+Fitness of i1 = 5
+Fitness of i2 = 9
+Fitness of i3 = 9
+NIL
+[3]> (bye)
+Bye.

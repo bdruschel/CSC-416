@@ -1,0 +1,55 @@
+;; Deprecated code as I was programming tsp.l
+
+; Generate the property list for map-string
+( defmethod map-list (lst)
+   ( cond
+      ( (null lst)
+         nil
+      )
+      ( t 
+         ( setf pair (list (car lst) (random 1001)) )
+         ( append pair (map-list (cdr lst)) )
+      )
+   )
+)
+
+; Establish a property list representing a map of randomly ordered cities
+; with random distances
+( defmethod map-string ()
+   ( setf (symbol-plist 'l) (map-list (city-string)) )
+)
+
+( defmethod extract-cities (lst)
+   ( cond
+      ( (null lst)
+         nil
+      )
+      ( t
+         ( cons (car lst) (extract-cities (cdr (cdr lst))) )
+      )
+   )
+)
+
+( defmethod extract-dist (lst)
+   ( cond
+      ( (null lst)
+         nil
+      )
+      ( t
+         ( cdr (cons (car (cdr lst)) (extract-cities (cdr lst))) )
+      )
+   )
+)
+
+( defmethod regenerate-map (old-map city)
+   ( setf (symbol-plist 'x) old-map )
+   ( cond
+      ( (null city)
+         nil
+      )
+      ( t 
+         ( setf pair (list (car city) (get 'x (car city))) )
+         ( append pair (regenerate-map old-map (cdr city)) )
+      )
+   )
+)

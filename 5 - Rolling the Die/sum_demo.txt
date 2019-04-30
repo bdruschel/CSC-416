@@ -1,0 +1,31 @@
+;;;; PROGRAMMING CHALLENGE: ROLLING THE DICE
+;; Brandon Druschel - 10/26/18
+
+;; TASK 4 - ROLL-FOR-SUM (DEMO)
+
+[4]> (load "b.l")
+;; Loading file b.l ...
+;;  Loading file die.l ...
+;;  Loaded file accum.l
+;; Loaded file b.l
+T
+[5]> ( roll-for-sum d4 d6 10 )
+NIL
+[6]> ( to-string d4 )
+"[4, 4, (2 1 4 2 2 3 2 1 3 1 4 1 4 3 1 3 4 3 1 3 1 1 2 4 3 3 3 1 1 1 3 2 1 2 1 4 4 3 1 3 3 2 1 2 1 3 4 4)]"
+[7]> (to-string d6)
+"[6, 6, (4 6 4 3 5 2 5 3 1 4 4 6 1 5 5 2 1 2 4 5 6 5 1 4 2 4 5 5 5 1 6 2 1 6 4 2 3 1 6 3 3 2 4 5 2 2 5 6)]"
+[8]> ( roll-for-sum d6 d12 7)
+NIL
+[9]> (forget d6)
+NIL
+[10]> (forget d12)
+NIL
+[11]> ( roll-for-sum d6 d12 7)
+NIL
+[12]> (to-string d6)
+"[6, 3, (3 4 4 6 2 5 4 3 6 3 4 2 4 3 6 3 2 6 5 3)]"
+[13]> (to-string d12)
+"[12, 4, (8 6 2 3 8 7 10 2 10 3 10 8 5 10 11 3 7 10 11 4)]"
+[14]> (bye)
+Bye.

@@ -1,0 +1,55 @@
+;;;; PROGRAMMING CHALLENGE: ROLLING THE DICE
+;; Brandon Druschel - 10/26/18
+
+;; TASK 1 - DIE MODEL (DEMO)
+
+[1]> (load "b.l")
+;; Loading file b.l ...
+;;  Loading file die.l ...
+;;  Loaded file die.l
+;; Loaded file b.l
+T
+[2]> (to-string d4) (to-string d6) (to-string d12)
+"[4, 1, NIL]"
+[3]>
+"[6, 1, NIL]"
+[4]>
+"[12, 1, NIL]"
+[5]> (roll d4) (roll d6) (roll d12)
+NIL
+[6]>
+NIL
+[7]>
+NIL
+[8]> (to-string d4) (to-string d6) (to-string d12)
+"[4, 4, (4)]"
+[9]>
+"[6, 2, (2)]"
+[10]>
+"[12, 4, (4)]"
+[11]> (roll d4) (roll d6) (roll d12)
+NIL
+[12]>
+NIL
+[13]>
+NIL
+[14]> (to-string d4) (to-string d6) (to-string d12)
+"[4, 4, (4 4)]"
+[15]>
+"[6, 6, (2 6)]"
+[16]>
+"[12, 4, (4 4)]"
+[17]> (forget d4) (forget d6) (forget d12)
+NIL
+[18]>
+NIL
+[19]>
+NIL
+[20]> (to-string d4) (to-string d6) (to-string d12)
+"[4, 4, NIL]"
+[21]>
+"[6, 6, NIL]"
+[22]>
+"[12, 4, NIL]"
+[23]> (bye)
+Bye.

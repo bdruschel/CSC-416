@@ -1,0 +1,33 @@
+;;;; PROGRAMMING CHALLENGE: ROLLING THE DICE
+;; Brandon Druschel - 10/26/18
+
+;; TASK 2 - ACCUMULATOR MODEL (DEMO)
+
+[7]> (load "accum.l")
+;; Loading file accum.l ...
+;; Loaded file accum.l
+T
+[8]> ( setf acc (make-instance 'accumulator) )
+#<ACCUMULATOR #x1A8EB0C1>
+[9]> (to-string acc)
+"[0]"
+[10]> (inc acc)
+
+*** - EVAL: too few arguments given to INC: (INC ACC)
+The following restarts are available:
+ABORT          :R1      Abort main loop
+Break 1 [11]> :a
+[12]> (inc acc 20)
+NIL
+[13]> (to-string acc)
+"[20]"
+[14]> (inc acc 12)
+NIL
+[15]> (to-string acc)
+"[32]"
+[16]> (reset acc)
+NIL
+[17]> (to-string acc)
+"[0]"
+[18]> (bye)
+Bye.

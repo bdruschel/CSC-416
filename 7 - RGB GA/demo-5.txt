@@ -1,0 +1,43 @@
+;; Brandon Druschel
+;; 11/17/18
+;; RBG GA TASK 5: Fitness Demo
+
+[3]> (load "rbg.l")
+;; Loading file rbg.l ...
+;; Loaded file rbg.l
+T
+[4]> (setf x (rbg-string))
+(B R R G G B R G G G R R G B B R B R B G G B R R R)
+[5]> x
+(B R R G G B R G G G R R G B B R B R B G G B R R R)
+[6]> (fitness-r x)
+10
+[7]> (fitness-b x)
+7
+[8]> (fitness-g x)
+8
+[9]> (setf fitness #'fitness-r)
+#<STANDARD-GENERIC-FUNCTION FITNESS-R>
+[10]> (funcall fitness x)
+10
+[11]> (setf fitness #'fitness-b)
+#<STANDARD-GENERIC-FUNCTION FITNESS-B>
+[12]> (funcall fitness x)
+7
+[13]> (setf fitness #'fitness-g)
+#<STANDARD-GENERIC-FUNCTION FITNESS-G>
+[14]> (funcall fitness x)
+8
+[15]> (fitness-demo)
+x = (B R R G R R G B B B R B G R R B G R B B B G G B B)
+Directly applying the fitness metrics ...
+fitness-r = 8
+fitness-b = 11
+fitness-g = 6
+Indirectly applying the fitness metrics ...
+fitness-r = 8
+fitness-g = 6
+fitness-b = 11
+NIL
+[16]> (byE)
+Bye.

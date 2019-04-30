@@ -1,0 +1,58 @@
+;;;; LISP SESSION 2: NUMERIC FORMS
+
+[1]> (+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15)
+120
+[2]> (/ (* 15 16) 2)
+120
+[3]> (+)
+0
+[4]> (*)
+1
+[5]> (+ 1 2 3 0)
+6
+[6]> (- 1 2 3)
+-4
+[7]> (* 1 2 3)
+6
+[8]> (/ 1 2 3_
+)
+
+*** - SYSTEM::READ-EVAL-PRINT: variable |3_| has no value
+The following restarts are available:
+USE-VALUE      :R1      Input a value to be used instead of |3_|.
+STORE-VALUE    :R2      Input a new value for |3_|.
+ABORT          :R3      Abort main loop
+Break 1 [9]> (/ 1 2 3)
+1/6
+Break 1 [9]> :a
+[10]> (mod 15 4)
+3
+[11]> (mod 4 15)
+4
+[12]> (sqrt 2)
+1.4142135
+[13]> (expt 7 60)
+508021860739623365322188197652216501772434524836001
+[14]> ; circumference of a radius 10 circle
+(* 2 pi 10)
+62.83185307179586477L0
+
+;;;;
+
+[1]> ; area of a radius 15 circle
+(* pi (expt 15 2))
+706.8583470577034787L0
+[2]> ; area of a radius 17.5 circle
+(* pi (expt 17.5 2))
+962.11273
+[4]> ; area of the ring defined by CCS of radii 17.5 and 15
+(- (* pi (expt 17.5 2)) (* pi (expt 15 2 )))
+255.25438
+[5]> (setf outer-area (* pi (expt 17.5 2 )))
+962.11273
+[6]> (setf inner-area (* pi (expt 15 2 )))
+706.8583470577034787L0
+[7]> (setf ring-area (- outer-area inner-area ))
+255.25438
+[8]> ring-area
+255.25438
